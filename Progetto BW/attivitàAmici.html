@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/circular-font.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Spotify</title>
+</head>
+
+<body>
+
+    <div class="boxAttivitàAmici p-3 rounded-3">
+
+        <div class="row text-white justify-content-between align-items-baseline">
+
+            <div class="col-4">
+                <h6 class="fw-bold">Attività amici</h6>
+            </div>
+            <div class="col-4 text-end">
+                <button class="btn p-0" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i
+                        class="bi bi-person-plus"></i></button>
+                <div class="offcanvas offcanvas-end rounded-3 addFriends" data-bs-scroll="true" tabindex="-1"
+                    id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                    <div class="offcanvas-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body ">
+
+                    </div>
+                </div>
+                <button class="btn p-0">
+                    <i class="bi bi-x"></i>
+                </button>
+            </div>
+            <div class="col-12 ps-4 pe-5">
+                <p>Consenti ad amici e follower su spotify di visualizzare cosa stai ascoltando</p>
+            </div>
+            <div class="col-12 colImg ps-4 pb-3">
+                <img class="rounded-circle" src="assets/imgs/main/image-1.jpg" alt="">
+            </div>
+            <div class="col-12 colImg ps-4 pb-3">
+                <img class="rounded-circle" src="assets/imgs/main/image-2.jpg" alt="">
+            </div>
+            <div class="col-12 colImg ps-4 pb-3">
+                <img class="rounded-circle" src="assets/imgs/main/image-3.jpg" alt="">
+            </div>
+            <div class="col-12 ps-4 pe-5">
+                <p>Vai a Impostazioni>Social e abilità "Condividi la mia attività di ascolto su Spotify".Puoi
+                    disattivare questa opzione quando vuoi.</p>
+            </div>
+            <div class="col-12 text-center">
+                <a href="#" class="btn rounded-5  px-4 fw-bold">Impostazioni</a href="#">
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+    <script src="node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

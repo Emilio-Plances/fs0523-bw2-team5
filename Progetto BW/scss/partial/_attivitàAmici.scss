@@ -1,0 +1,34 @@
+
+body{
+    display: flex;
+    justify-content: flex-end;
+}
+.boxAttivitàAmici, .addFriends{
+    background-color: $dark;
+    max-width: 30%;
+    min-width: 20%;
+    height: 80vh;
+}
+
+.bi.bi-person-plus, .bi.bi-x{
+    color: #838383;
+    font-size: 25px;
+    
+}
+
+.boxAttivitàAmici .row .col-12.colImg .rounded-circle{
+    height: 50px;
+    width: 50px;
+}
+
+.boxAttivitàAmici .row .col-12 p{
+    color:#A1A1A1A1;
+    font-size: 0.9rem;
+}
+
+.boxAttivitàAmici .row .col-12.text-center a.btn{
+    background-color: white;
+    color: black;
+    font-size: 0.8rem;
+    padding: 0.8rem 0;
+}
