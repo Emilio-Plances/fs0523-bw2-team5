@@ -1,0 +1,6 @@
+.track-card{
+   background-color: $primary;
+   &:hover{
+      background-color: $dark;
+   }
+}

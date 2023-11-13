@@ -11854,4 +11854,14 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+}
+.track-card {
+  background-color: #0F0F0F;
+}
+.track-card:hover {
+  background-color: #181818;
+}
+
+.hidden {
+  display: none;
 }/*# sourceMappingURL=style.css.map */
