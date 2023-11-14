@@ -11863,9 +11863,9 @@ body {
 .boxAttivitàAmici,
 .addFriends {
   background-color: #181818;
-  max-width: 30%;
-  min-width: 20%;
-  height: 80vh;
+  max-width: 400px;
+  min-width: 300px;
+  height: 100vh;
 }
 
 .boxAttivitàAmici {
@@ -11876,10 +11876,6 @@ body {
 
 .hidden {
   display: none;
-}
-
-.addFriends {
-  margin-right: 5px;
 }
 
 .bi.bi-person-plus,
@@ -11968,6 +11964,59 @@ a.fw-bold.link-underline {
 .boxAttivitàAmici .col-12.text-center a.btn.rounded-5:hover,
 .boxAttivitàAmici .col-12.text-start.py-4 .fw-bold.link-underline:hover {
   font-size: 15px;
+}
+
+@media screen and (max-width: 917px) {
+  a.fw-bold.link-underline,
+  .boxAttivitàAmici p {
+    font-size: 0.7rem;
+  }
+  .offcanvas-body .col-12.text-start .textPrivacy {
+    font-size: 0.6rem;
+  }
+  .boxAttivitàAmici .row .col-12.text-center a.btn {
+    font-size: 0.7rem;
+    padding: 0.6rem 0;
+  }
+  .boxAttivitàAmici .row .col-3.colImg .rounded-circle {
+    height: 40px;
+    width: 40px;
+  }
+  .col-6 h6.fw-bold, .col-6 .fw-bold.h6 {
+    font-size: 0.8rem;
+  }
+  .bi.bi-person-plus,
+  .bi.bi-x,
+  .bi.bi-arrow-left {
+    color: #838383;
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 729px) {
+  a.fw-bold.link-underline,
+  .boxAttivitàAmici p {
+    font-size: 0.6rem;
+  }
+  .offcanvas-body .col-12.text-start .textPrivacy {
+    font-size: 0.5rem;
+  }
+  .boxAttivitàAmici .row .col-12.text-center a.btn {
+    font-size: 0.6rem;
+    padding: 0.6rem 0;
+  }
+  .boxAttivitàAmici .row .col-3.colImg .rounded-circle {
+    height: 20px;
+    width: 20px;
+  }
+  .col-6 h6.fw-bold, .col-6 .fw-bold.h6 {
+    font-size: 0.6rem;
+  }
+  .bi.bi-person-plus,
+  .bi.bi-x,
+  .bi.bi-arrow-left {
+    color: #838383;
+    font-size: 15px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
