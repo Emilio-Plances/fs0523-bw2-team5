@@ -11860,25 +11860,42 @@ body {
   justify-content: flex-end;
 }
 
-.boxAttivitàAmici, .addFriends {
+.boxAttivitàAmici,
+.addFriends {
   background-color: #181818;
   max-width: 30%;
   min-width: 20%;
   height: 80vh;
 }
 
-.bi.bi-person-plus, .bi.bi-x {
+.boxAttivitàAmici {
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.addFriends {
+  margin-right: 5px;
+}
+
+.bi.bi-person-plus,
+.bi.bi-x,
+.bi.bi-arrow-left {
   color: #838383;
   font-size: 25px;
 }
 
-.boxAttivitàAmici .row .col-12.colImg .rounded-circle {
+.boxAttivitàAmici .row .col-3.colImg .rounded-circle {
   height: 50px;
   width: 50px;
 }
 
-.boxAttivitàAmici .row .col-12 p {
-  color: rgba(161, 161, 161, 0.631372549);
+.boxAttivitàAmici p {
+  color: rgb(199, 191, 191);
   font-size: 0.9rem;
 }
 
@@ -11887,6 +11904,70 @@ body {
   color: black;
   font-size: 0.8rem;
   padding: 0.8rem 0;
+}
+
+a.fw-bold.link-underline {
+  background-color: #4867AA;
+  font-size: 0.8rem;
+}
+
+.offcanvas-body .col-12.text-start .textPrivacy {
+  font-size: 0.7rem;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  position: absolute;
+  top: -1px;
+  right: 30px;
+  z-index: 1;
+  width: 5%;
+  color: white;
+  background-color: #181818;
+  padding: 2px;
+  border-radius: 10px;
+}
+
+.tooltip-textFriends {
+  visibility: hidden;
+  position: absolute;
+  top: -1px;
+  right: 40px;
+  z-index: 1;
+  width: 30%;
+  color: white;
+  background-color: #181818;
+  padding: 2px;
+  border-radius: 10px;
+}
+
+.tooltip-text-back {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 5%;
+  color: white;
+  background-color: #181818;
+  padding: 2px;
+  border-radius: 10px;
+}
+
+.btn.p-0:hover .tooltip-text,
+.btn.p-0:hover .tooltip-textFriends,
+.backHover:hover .tooltip-text-back {
+  visibility: visible;
+}
+
+.bi.bi-person-plus:hover,
+.bi.bi-x:hover,
+.bi.bi-arrow-left:hover {
+  color: white;
+}
+
+.boxAttivitàAmici .col-12.text-center a.btn.rounded-5:hover,
+.boxAttivitàAmici .col-12.text-start.py-4 .fw-bold.link-underline:hover {
+  font-size: 15px;
 }
 
 /*# sourceMappingURL=style.css.map */
