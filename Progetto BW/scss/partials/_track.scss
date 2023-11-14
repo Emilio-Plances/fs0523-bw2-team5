@@ -1,6 +1,26 @@
 .track-card{
    background-color: $primary;
    &:hover{
-      background-color: $dark;
+      background-color: $dark; 
+      .heart{
+         display:block;
+         color:grey;
+         &:hover{
+            color:white;
+         }
+      }
+   }
+   .box-hearts{
+      position: relative;
+      right:25px;
+      width:50px;
+   }
+   .heart,.filled-heart{
+      position:absolute;
+      right:0;
+   }
+   .filled-heart{
+      color:$secondary;
+      z-index:1;
    }
 }

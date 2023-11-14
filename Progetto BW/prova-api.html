@@ -10,12 +10,15 @@
 </head>
 
 <body>
-  <input id="search-bar" type="text">
-  <button id="search-button">cerca</button>
-   <div class="container"></div>
-  <div id="box-track"></div>
-
-   <template id="track-template">
+   <div id="central-box">
+      <form>
+         <input id="search-bar" type="text">
+         <button id="search-button">cerca</button>
+      </form>
+      <div class="container"></div>
+      <div id="box-track"></div>
+   </div>   
+   <template id="track-search-template">
       <div class="d-flex p-3 track-card text-white justify-content-between align-items-center mb-3">
          <div class="d-flex">
             <div>
@@ -23,21 +26,22 @@
             </div>
             <div class="ms-3">
                <p class="name-track m-0 p-0">Titolo</p>
-               <a class="artist-name-track text-white"href="#">Artist</a>
+               <a href="#" class="artist-name-track text-white">Artist</a>
             </div>
          </div>
          <div class="d-flex">
-            <i class="bi bi-heart mx-3"></i>
-            <i class="bi bi-heart-fill mx-3 hidden"></i>
+            <div class="box-hearts">
+               <i class="heart bi bi-heart mx-3 hidden"></i>
+               <i class="filled-heart bi bi-heart-fill mx-3 hidden"></i>
+            </div>
             <p class="time-track m-0 p-0">track time</p>
          </div>
       </div>
    </template>
+   <template is="artist-page-template"></template>
 
-
-   
    <script src="node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-   <script src="js/prova-api.js"></script>
+   <script type="module" src="js/prova-api.js"></script>
 </body>
 </html>

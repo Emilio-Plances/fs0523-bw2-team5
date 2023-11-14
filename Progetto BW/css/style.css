@@ -11861,7 +11861,38 @@ textarea.form-control-lg {
 .track-card:hover {
   background-color: #181818;
 }
+.track-card:hover .heart {
+  display: block;
+  color: grey;
+}
+.track-card:hover .heart:hover {
+  color: white;
+}
+.track-card .box-hearts {
+  position: relative;
+  right: 25px;
+  width: 50px;
+}
+.track-card .heart, .track-card .filled-heart {
+  position: absolute;
+  right: 0;
+}
+.track-card .filled-heart {
+  color: #1FDF64;
+  z-index: 1;
+}
 
 .hidden {
   display: none;
+}
+
+#central-box {
+  background-color: #0F0F0F;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }/*# sourceMappingURL=style.css.map */
