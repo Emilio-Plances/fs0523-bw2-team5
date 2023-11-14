@@ -1,6 +1,6 @@
 import {Artist} from "./Artist.js";
 
-export class Track{
+export class SearchTrack{
    constructor(_API, _title, _artistName,_artistID, _albumCover, _preview,_duration, _container){
       this.API=_API;
       this.title=_title;
