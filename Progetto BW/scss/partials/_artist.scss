@@ -1,0 +1,58 @@
+$scritte: #ffff;
+$sfondo: #51544e;
+.contenitore {
+      background-image: url(https://th.bing.com/th/id/OIP.eJXsMhozoC3rm97gLms6RgHaE8?w=234&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+
+      height: auto;
+      h1 {
+            color: $scritte;
+            font-size: 40px;
+            margin-bottom: 0;
+      }
+}
+.logo {
+      color: #2590f5;
+}
+.text {
+      font-size: 5px;
+      color: $scritte;
+      margin-left: 10px;
+}
+.bold {
+      color: $scritte;
+      font-weight: bold;
+      font-size: 9px;
+      padding-left: 10px;
+}
+.cont2 {
+      background-color: $dark;
+
+      .play {
+            background-color: $secondary;
+            border-radius: 100%;
+            color: $primary;
+            margin: 0 5px;
+      }
+      .random {
+            color: $scritte;
+      }
+}
+.btn {
+      color: $scritte;
+      border: 1px solid rgba(255, 255, 255, 0.281);
+      padding: 0 10px;
+      margin: 0 10px;
+      border-radius: 20px;
+      font-size: 10px;
+}
+
+#punti {
+      color: rgba(255, 255, 255, 0.41);
+}
+.cont3 {
+      color: $scritte;
+      background-color: $dark;
+}
