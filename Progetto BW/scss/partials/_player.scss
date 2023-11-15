@@ -171,24 +171,4 @@ i:hover {
   gap: 1em;
 }
 
-.volume-bar {
-  display: flex;
-  align-items: center;
-  gap: .7em;
-  color: $secondary;
-}
-
-.volume-bar .progress-bar {
-  width: 6em;
-}
-
-.volume-bar .progress-bar:hover .progress::after {
-  --size: .8em;
-}
-
-.activeGreen{
-  color: $secondary;
-}
-
-
 

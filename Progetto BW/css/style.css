@@ -12071,23 +12071,4 @@ i:hover {
   gap: 1em;
 }
 
-.volume-bar {
-  display: flex;
-  align-items: center;
-  gap: 0.7em;
-  color: #1FDF64;
-}
-
-.volume-bar .progress-bar {
-  width: 6em;
-}
-
-.volume-bar .progress-bar:hover .progress::after {
-  --size: .8em;
-}
-
-.activeGreen {
-  color: #1FDF64;
-}
-
 /*# sourceMappingURL=style.css.map */
