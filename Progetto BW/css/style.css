@@ -11866,7 +11866,7 @@ textarea.form-control-lg {
       src: url(../fonts/CircularStd-Bold.otf);
       font-weight: 700;
       font-style: normal;
-}*/
+}* fai breakpoint*/
 @font-face {
   font-family: "Circular";
   src: url(../fonts/CircularStd-Black.otf);
@@ -11874,9 +11874,7 @@ textarea.form-control-lg {
   font-style: normal;
 }
 #pd {
-  max-width: 1300px;
   background: linear-gradient(#51544e, #181818, black);
-  padding-left: 20px;
 }
 
 .contenitore {
@@ -11884,11 +11882,12 @@ textarea.form-control-lg {
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  height: 570px;
+  height: 380px;
 }
 .contenitore .pos {
   position: relative;
-  top: 350px;
+  top: 188px;
+  left: 14px;
 }
 .contenitore h1, .contenitore .h1 {
   color: white;
@@ -11919,8 +11918,8 @@ textarea.form-control-lg {
 
 .cont2 {
   justify-content: space-between;
-  max-width: 20%;
-  margin: 20px 0;
+  max-width: 40%;
+  margin: 20px 21px;
 }
 
 .playBlack {
@@ -11928,16 +11927,17 @@ textarea.form-control-lg {
   font-size: 2em;
 }
 
-/*.circle {
-      width: 50px;
-      height: 50px;
-      text-align: center;
-      line-height: 50px;
-      background-color: $secondary;
-      border-radius: 100%;
+.circle {
+  width: 58px;
+  /*height: auto;
+  text-align: center;
+  line-height: 50px;
+  background-color: $secondary;
+  border-radius: 100%;
 
-      position: absolute;
-}*/
+  position: absolute;*/
+}
+
 .random {
   color: white;
 }
@@ -11957,14 +11957,11 @@ textarea.form-control-lg {
 
 #punti {
   color: rgba(255, 255, 255, 0.41);
+  margin-right: 10px;
 }
 
 .cont3 {
   color: white;
-}
-
-.sotcont {
-  max-width: 70%;
 }
 
 .t5 {
@@ -11991,6 +11988,7 @@ textarea.form-control-lg {
 }
 
 .text3 {
+  margin-left: 21px;
   color: white;
   font-size: x-large;
   font-weight: bold;
@@ -12007,7 +12005,6 @@ textarea.form-control-lg {
 
 .tra {
   background-color: #51544e;
-  max-width: 80%;
   height: auto;
   border-radius: 20px;
 }
@@ -12025,6 +12022,8 @@ textarea.form-control-lg {
   right: 7px;
 }
 
-.bot {
-  max-width: 35%;
+@media only screen and (min-width: 560px) {
+  .bot {
+    max-width: 35%;
+  }
 }/*# sourceMappingURL=style.css.map */

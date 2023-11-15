@@ -11,7 +11,7 @@ $sfondo: #51544e;
       src: url(../fonts/CircularStd-Bold.otf);
       font-weight: 700;
       font-style: normal;
-}*/
+}* fai breakpoint*/
 @font-face {
       font-family: "Circular";
       src: url(../fonts/CircularStd-Black.otf);
@@ -19,19 +19,18 @@ $sfondo: #51544e;
       font-style: normal;
 }
 #pd {
-      max-width: 1300px;
       background: linear-gradient($sfondo, $dark, black);
-      padding-left: 20px;
 }
 .contenitore {
       background-image: url(https://th.bing.com/th/id/OIP.eJXsMhozoC3rm97gLms6RgHaE8?w=234&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7);
       background-size: cover;
       background-repeat: no-repeat;
       width: 100%;
-      height: 570px;
+      height: 380px;
       .pos {
             position: relative;
-            top: 350px;
+            top: 188px;
+            left: 14px;
       }
       h1 {
             color: $scritte;
@@ -60,24 +59,24 @@ $sfondo: #51544e;
 }
 .cont2 {
       justify-content: space-between;
-      max-width: 20%;
-      margin: 20px 0;
+      max-width: 40%;
+      margin: 20px 21px;
 }
 .playBlack {
       color: black;
       font-size: 2em;
 }
 
-/*.circle {
-      width: 50px;
-      height: 50px;
+.circle {
+      width: 58px;
+      /*height: auto;
       text-align: center;
       line-height: 50px;
       background-color: $secondary;
       border-radius: 100%;
 
-      position: absolute;
-}*/
+      position: absolute;*/
+}
 .random {
       color: $scritte;
 }
@@ -97,12 +96,12 @@ $sfondo: #51544e;
 }
 #punti {
       color: rgba(255, 255, 255, 0.41);
+      margin-right: 10px;
 }
 .cont3 {
       color: $scritte;
 }
 .sotcont {
-      max-width: 70%;
 }
 .t5 {
       white-space: nowrap;
@@ -125,6 +124,7 @@ $sfondo: #51544e;
       color: $scritte;
 }
 .text3 {
+      margin-left: 21px;
       color: $scritte;
       font-size: x-large;
       font-weight: bold;
@@ -138,7 +138,7 @@ $sfondo: #51544e;
 }
 .tra {
       background-color: $sfondo;
-      max-width: 80%;
+
       height: auto;
       border-radius: 20px;
 }
@@ -156,6 +156,9 @@ $sfondo: #51544e;
       bottom: 10px;
       right: 7px;
 }
-.bot {
-      max-width: 35%;
+
+@media only screen and (min-width: 560px) {
+      .bot {
+            max-width: 35%;
+      }
 }
