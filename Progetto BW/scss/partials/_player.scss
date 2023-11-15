@@ -132,7 +132,6 @@ i:hover {
 }
 
 .progress-bar {
-
   height: 4px;
   border-radius: 10px;
   width: 30%;
@@ -176,6 +175,7 @@ i:hover {
   display: flex;
   align-items: center;
   gap: .7em;
+  color: $secondary;
 }
 
 .volume-bar .progress-bar {
@@ -189,3 +189,6 @@ i:hover {
 .activeGreen{
   color: $secondary;
 }
+
+
+

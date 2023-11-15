@@ -12075,6 +12075,7 @@ i:hover {
   display: flex;
   align-items: center;
   gap: 0.7em;
+  color: #1FDF64;
 }
 
 .volume-bar .progress-bar {

@@ -1,16 +1,49 @@
-// Elemento audio
-var audioPlayer = new Audio();
+let button1 = document.getElementById('button1');
+let button2 = document.getElementById('button2');
 
-// URL del file MP3 (sostituisci con il tuo endpoint)
-var mp3Url = 'https://cdns-preview-4.dzcdn.net/stream/c-4abfe85155aa7b5b84020c6125bec66b-6.mp3';
 
-// Imposta il sorgente audio
-audioPlayer.src = mp3Url;
+button1.addEventListener('click', function (e) {
+    e.preventDefault();
+    LINK = `https://striveschool-api.herokuapp.com/api/deezer/track/`
+    selectedID = `127673047`
+    getSong()
+});
 
-// Pulsante play/pausa
-var playPauseButton = document.getElementById('play');
+button2.addEventListener('click', function (e) {
+    e.preventDefault();
+    LINK = `https://striveschool-api.herokuapp.com/api/deezer/track/`
+    selectedID = `552496552`
+    getSong()
+});
 
-// Ascolta l'evento di clic sul pulsante play/pausa
+
+async function getSong() {
+    fetch(`${LINK}${selectedID}`, {
+        method: 'GET',
+        headers: {
+            "Content-Type": "application/json",
+        }
+    }).then(res => res.json())
+        .then(track => {
+            initMusicPlayer(track);
+        })
+}
+
+async function initMusicPlayer(track){
+    document.querySelector('.musicPlayerTitle ').innerHTML = track.title
+    document.querySelector('.musicPlayerArtist').innerHTML = track.artist.name
+    document.querySelector('.imgMusicPlayer').src = track.album.cover_small
+    audioPlayer.src = track.preview
+
+}
+
+
+
+
+let audioPlayer = new Audio();
+
+let playPauseButton = document.getElementById('play');
+
 playPauseButton.addEventListener('click', function () {
     if (audioPlayer.paused) {
         audioPlayer.play();
@@ -23,45 +56,37 @@ playPauseButton.addEventListener('click', function () {
     }
 });
 
-// Aggiorna la barra di avanzamento
 audioPlayer.addEventListener('timeupdate', function () {
     let progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
     document.querySelector('.progress').style.width = progress + '%';
 
-    // Aggiorna il tempo corrente
     let currentTime = formatTime(audioPlayer.currentTime);
     document.getElementById('currentTime').innerText = currentTime;
 });
 
-// Aggiorna la durata totale
 audioPlayer.addEventListener('loadedmetadata', function () {
     let duration = formatTime(audioPlayer.duration);
     document.getElementById('duration').innerText = duration;
 });
 
-// Funzione per formattare il tempo come mm:ss
 function formatTime(time) {
     var minutes = Math.floor(time / 60);
     var seconds = Math.floor(time % 60);
     return minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
 }
 
-// Funzione per gestire il progresso quando viene cliccato
 document.querySelector('.progress-container').addEventListener('click', function (e) {
     var progressBar = document.querySelector('.progress-bar');
     var percent = e.offsetX / progressBar.offsetWidth;
     audioPlayer.currentTime = percent * audioPlayer.duration;
 });
 
-// Slider del volume
 let volumeSlider = document.querySelector('.volume-slider');
 
-// Ascolta gli eventi di cambiamento sullo slider del volume
 volumeSlider.addEventListener('input', function () {
     audioPlayer.volume = volumeSlider.value;
 });
 
-// Inizializza il volume iniziale
 audioPlayer.volume = volumeSlider.value;
 
 // Pulsante per passare alla canzone successiva
@@ -78,14 +103,14 @@ skipPrevButton.addEventListener('click', function () {
     // Ad esempio, puoi cambiare l'URL del file MP3 e avviare la riproduzione
 });
 
-// Pulsante per la riproduzione in loop
+
 let loopButton = document.querySelector('.bi-arrow-repeat');
 loopButton.addEventListener('click', function () {
     audioPlayer.loop = !audioPlayer.loop;
     updateButtonState(loopButton, audioPlayer.loop);
 });
 
-// Funzione per aggiornare lo stato del pulsante
+
 function updateButtonState(button, isActive) {
     if (isActive) {
         button.classList.add('activeGreen');
@@ -113,5 +138,10 @@ shuffleButton.addEventListener('click', function () {
 
 function toggleActiveGreen(element) {
     element.classList.toggle('activeGreen');
-}
+};
+
+
+
+
+
 
