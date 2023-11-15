@@ -19,7 +19,8 @@ $sfondo: #51544e;
       font-style: normal;
 }
 #pd {
-      background-color: $dark;
+      max-width: 1300px;
+      background: linear-gradient($sfondo, $dark, black);
       padding-left: 20px;
 }
 .contenitore {
@@ -58,49 +59,47 @@ $sfondo: #51544e;
       margin-bottom: auto;
 }
 .cont2 {
-      background-color: $dark;
-      .ascolto {
-            justify-content: space-between;
-            max-width: 30%;
-            margin: 20px 0;
-      }
-      .playBlack {
-            color: black;
-            font-size: 2em;
-      }
-      .circle {
-            width: 50px;
-            height: 50px;
-            text-align: center;
-            line-height: 50px;
-            background-color: $secondary;
-            border-radius: 100%;
-            opacity: 0;
-            transform: translate(-50%, -50%);
-            position: absolute;
-            bottom: -25px;
-            right: 0px;
-            transition: opacity 0.3s, transform 0.3s;
-      }
-      .random {
-            color: $scritte;
-      }
+      justify-content: space-between;
+      max-width: 20%;
+      margin: 20px 0;
 }
+.playBlack {
+      color: black;
+      font-size: 2em;
+}
+
+/*.circle {
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      background-color: $secondary;
+      border-radius: 100%;
+
+      position: absolute;
+}*/
+.random {
+      color: $scritte;
+}
+
 .btn {
       color: $scritte;
       border: 1px solid rgba(255, 255, 255, 0.281);
-      padding: 0 10px;
+      padding: 5px 10px;
       margin: 0 10px;
       border-radius: 20px;
-      font-size: 10px;
-}
+      font-size: 15px;
 
+      &:hover {
+            border: 1px solid rgb(255, 255, 255);
+            color: $scritte;
+      }
+}
 #punti {
       color: rgba(255, 255, 255, 0.41);
 }
 .cont3 {
       color: $scritte;
-      background-color: $dark;
 }
 .sotcont {
       max-width: 70%;
@@ -114,20 +113,21 @@ $sfondo: #51544e;
       background-color: $sfondo;
 }
 .visi {
-      visibility: hidden;
+      display: none;
+
+      &:hover {
+            display: block;
+      }
 }
-&:hover {
-      visibility: visible;
-}
-.text2 {
-      font-family: "circular", serif;
-      font-weight: 400;
+.text6 {
+      font-size: smaller;
+      font-weight: bold;
       color: $scritte;
 }
 .text3 {
       color: $scritte;
-      font-family: "circular", serif;
-      font-weight: 700;
+      font-size: x-large;
+      font-weight: bold;
 }
 .cont4 {
       margin: 0 10px;
@@ -144,11 +144,18 @@ $sfondo: #51544e;
 }
 .bold2 {
       @extend.bold;
-      margin-left: 82px;
 }
 .immg {
       border-radius: 100%;
       margin-bottom: 10px;
       margin-top: 30px;
       margin-left: 30px;
+}
+.imm {
+      position: relative;
+      bottom: 10px;
+      right: 7px;
+}
+.bot {
+      max-width: 35%;
 }
