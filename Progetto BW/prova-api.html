@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="assets/css/circular-font.css">
+   <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+   <link rel="stylesheet" href="css/style.css">
+   <title>Spotify</title>
+</head>
+
+<body>
+   <div id="central-box">
+      <div class="container-fluid">
+         <div>
+            <h3 class="text-white">Ascoltate di recente</h3>
+            <div id="track-home-container" class="d-flex"></div>
+         </div>   
+            
+         <div>
+            <h3 class="text-white">Artisti più ascoltati</h3>
+            <div id="track-home-container" class="d-flex"></div>
+         </div>
+
+         <div>
+            <h3 class="text-white">Album più famosi</h3>
+            <div id="track-home-container" class="d-flex"></div>
+         </div>
+      
+      </div>
+   </div>   
+
+   <template id="track-search-template">
+      <div class="d-flex p-3 track-card text-white justify-content-between align-items-center mb-3">
+         <div class="d-flex">
+            <div>
+               <img class="img-track rounded-circle" src="https://picsum.photos/50/50?random=1" alt="#">
+            </div>
+            <div class="ms-3">
+               <p class="name-track m-0 p-0">Titolo</p>
+               <a href="#" class="artist-name-track text-white">Artist</a>
+            </div>
+         </div>
+         <div class="d-flex">
+            <div class="box-hearts">
+               <i class="heart bi bi-heart mx-3 hidden"></i>
+               <i class="filled-heart bi bi-heart-fill mx-3 hidden"></i>
+            </div>
+            <p class="time-track m-0 p-0">track time</p>
+         </div>
+      </div>
+   </template>
+
+   <template id="home-template"></template>
+
+   <template id="track-home-template">
+      <div class="bg-dark card p-2 pt-3 rounded-3 me-3">
+         <a href="#" class="text-center"><img src="https://picsum.photos/250/250?random=1" class="home-card-img rounded-3 card-img-top" alt="..."></a>
+         <div class="card-body text-white">
+            <h5 class="home-card-title card-title">Name</h5>
+            <p class="home-card-artist card-text">Artist</p>
+         </div>
+      </div>
+   </template>
+
+   <script src="node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+   <script type="module" src="js/prova-api.js"></script>
+</body>
+</html> 
+
+
+
+<!--  <form>
+         <input id="search-bar" type="text">
+         <button id="search-button">Cerca</button>
+      </form> -->
