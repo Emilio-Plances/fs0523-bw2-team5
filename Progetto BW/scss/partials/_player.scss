@@ -1,16 +1,16 @@
-*{
+* {
   box-sizing: border-box;
   font-family: "circular std book", sans-serif;
 }
 
-body{
+body {
   margin: 0;
   padding: 0;
   background-color: #222;
   font-size: 13px;
 }
 
-.music-player{
+.music-player {
   --tertiary-color: #ddd;
   --quaternary-color: #999;
   --green-color: #2d5;
@@ -20,7 +20,7 @@ body{
   justify-content: center;
   align-items: center;
   position: relative;
-  
+
   height: 5rem;
   padding: var(--padding);
   color: var(--tertiary-color);
@@ -36,10 +36,10 @@ i:hover {
 
 
 
-.song-bar{
+.song-bar {
   position: absolute;
   left: var(--padding);
-  
+
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -55,24 +55,24 @@ i:hover {
 }
 
 
-.image-container{
+.image-container {
   --size: 3.0em;
   flex-shrink: 0;
   width: var(--size);
   height: var(--size);
 }
 
-.image-container img{
+.image-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.song-description p{
+.song-description p {
   margin: 0.2rem;
 }
 
-.title, 
+.title,
 .artist {
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -90,7 +90,7 @@ i:hover {
 }
 
 .progress-controller {
-  
+
   width: 100%;
   display: flex;
   justify-content: center;
@@ -101,7 +101,7 @@ i:hover {
 }
 
 .control-buttons {
- 
+
   display: flex;
   align-items: center;
   gap: 2em;
@@ -113,9 +113,9 @@ i:hover {
   background-color: var(--tertiary-color);
   color: #111;
   border-radius: 100%;
-  
-  
-  
+
+
+
 }
 
 .play-pause:hover {
@@ -132,23 +132,23 @@ i:hover {
 }
 
 .progress-bar {
-  
+
   height: 4px;
   border-radius: 10px;
   width: 30%;
   background-color: #ccc4;
 }
 
-.progress{
+.progress {
   position: relative;
   height: 100%;
   width: 30%;
   border-radius: 10px;
   background-color: var(--quaternary-color);
- 
+
 }
 
-.progress-bar .progress{
+.progress-bar .progress {
   background-color: var(--green-color);
 }
 
@@ -172,7 +172,7 @@ i:hover {
   gap: 1em;
 }
 
-.volume-bar{
+.volume-bar {
   display: flex;
   align-items: center;
   gap: .7em;
@@ -186,3 +186,6 @@ i:hover {
   --size: .8em;
 }
 
+.activeGreen{
+  color: $secondary;
+}
