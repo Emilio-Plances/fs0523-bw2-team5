@@ -10,30 +10,11 @@
 </head>
 
 <body>
-   <div id="central-box">
-      <form>
-         <input id="search-bar" type="text">
-         <button id="search-button">Cerca</button>
-      </form>
-      <!-- <div class="container-fluid">
-         <div class="mb-4">
-            <h3 class="text-white">Ascoltate di recente</h3>
-            <div id="track-home-container" class="d-flex">
-            </div>
-         </div>   
-            
-         <div class="mb-3">
-            <h3 class="text-white">Artisti più ascoltati</h3>
-            <div id="artist-home-container" class="d-flex"></div>
-         </div>
+   <button id="home-button">home</button>
+   
+   <input id="search-bar" class="form-control ms-2 text-light" type="search" placeholder="Cosa vuoi ascoltare" aria-label="Search">
 
-         <div class="mb-3">
-            <h3 class="text-white">Album più famosi</h3>
-            <div id="album-home-container" class="d-flex"></div>
-         </div>
-
-      </div>  -->
-   </div>   
+   <div id="central-box"></div>   
 
    <template id="track-search-template">
       <div class="d-flex p-3 track-card text-white justify-content-between align-items-center mb-3">
@@ -56,21 +37,37 @@
       </div>
    </template>
 
-   <template id="home-template"></template>
-
-   <template id="card-home-template">
-      <div id="track-home-container" class="d-flex">
-         <div class="card p-2 pt-3 rounded-3 me-3">
-            <a href="#" class="text-center imgCard">
-               <img src="https://picsum.photos/250/250?random=1" class="home-card-img rounded-3 card-img-top" alt="...">
-               <div class="circle">
-                  <i class="ms-1 playBlack bi bi-play-fill"></i>
-               </div>
-            </a>
-            <div class="card-body text-white">
-               <h5 class="home-card-title card-title">Name</h5>
-               <p class="home-card-artist card-text">Artist</p>
+   <template id="home-template">
+      <div class="container-fluid">
+         <div class="mb-4">
+            <h3 class="text-white">Ascoltate di recente</h3>
+            <div id="track-home-container" class="d-flex home-container">
             </div>
+         </div>   
+            
+         <div class="mb-4">
+            <h3 class="text-white">Artisti più ascoltati</h3>
+            <div id="artist-home-container" class="d-flex home-container"></div>
+         </div>
+
+         <div class="mb-4">
+            <h3 class="text-white">Album più famosi</h3>
+            <div id="album-home-container" class="d-flex home-container"></div>
+         </div>
+      </div> 
+   </template>
+
+   <template id="card-home-template"> 
+      <div class="card-home card p-2 pt-3 rounded-3 me-3 mb-3">
+         <div class="text-center imgCard">
+            <img src="https://picsum.photos/250/250?random=1" class="home-card-img rounded-3 card-img-top" alt="...">
+            <div class="circle">
+               <i class="ms-1 playBlack bi bi-play-fill"></i>
+            </div>
+         </div>
+         <div class="card-body text-white">
+            <a class="home-link-title" href="#"><h5 class="home-card-title text-white card-title">Name</h5></a>
+            <a class="home-link-artist" href="#"><p class="home-card-artist text-white card-text">Artist</p></a>
          </div>
       </div>
    </template>
@@ -80,10 +77,3 @@
    <script type="module" src="js/prova-api.js"></script>
 </body>
 </html> 
-
-
-
-<!--  <form>
-         <input id="search-bar" type="text">
-         <button id="search-button">Cerca</button>
-      </form> -->

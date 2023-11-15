@@ -11883,10 +11883,11 @@ textarea.form-control-lg {
 }
 
 .card {
-  flex-basis: 230px;
+  flex-basis: 205px;
   background-color: #181818;
 }
 .card:hover {
+  cursor: pointer;
   background-color: #282828;
 }
 .card:hover .circle {
@@ -11896,18 +11897,27 @@ textarea.form-control-lg {
 .card .home-card-img {
   width: 90%;
 }
-
-.playBlack {
-  color: black;
-  font-size: 2em;
+.card .home-card-artist, .card .home-card-title {
+  font-size: 1em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-
-.imgCard {
+.card .home-link-title:hover {
+  text-decoration: none;
+}
+.card .home-link-artist {
+  color: #828282;
+}
+.card .imgCard {
   position: relative;
   display: block;
 }
-
-.circle {
+.card .playBlack {
+  color: black;
+  font-size: 2em;
+}
+.card .circle {
   width: 50px;
   height: 50px;
   text-align: center;
@@ -11920,6 +11930,16 @@ textarea.form-control-lg {
   bottom: -25px;
   right: 0px;
   transition: opacity 0.3s, transform 0.3s;
+}
+
+.home-container {
+  overflow: hidden;
+  flex-wrap: wrap;
+  max-height: 291px;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 .hidden {
