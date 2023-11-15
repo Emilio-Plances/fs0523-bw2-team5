@@ -4,18 +4,21 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
    <link rel="stylesheet" href="assets/css/circular-font.css">
    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
-  
    
-   <link rel="stylesheet" href="miocss.css">
+   <link rel="stylesheet" href="css/style.css">
+   
+   
    <title>Spotify</title>
 </head>
 
 <body>
 
-   <div class="music-player">
+
+   
+
+<div class="music-player">
       <div class="song-bar">
          <div class="song-infos">
             <div class="image-container">
@@ -38,7 +41,7 @@
          <div class="control-buttons">
             <i class="bi bi-shuffle"></i>
             <i class="bi bi-skip-start-fill"></i>
-            <i class="play-pause play bi bi-caret-right-fill"></i>
+            <i class="play-pause bi bi-play-fill" id="play"></i>
             <i class="bi bi-skip-end-fill"></i>
             <i class="bi bi-pip"></i>
          </div>
@@ -48,7 +51,10 @@
                <div class="progress"></div>
             </div>
             <span>3:15</span>
-         </div>
+
+            
+
+        </div>
       </div>
       <div class="other-features">
          <i class="bi bi-mic"></i>
@@ -68,7 +74,7 @@
 
    <script src="node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-   <script src="js/script.js"></script>
+   <script src="footer.js"></script>
 </body>
 
 </html>

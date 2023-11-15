@@ -1,4 +1,3 @@
-@import url(https://db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book);
 
 *{
     box-sizing: border-box;
@@ -9,12 +8,12 @@ body{
     margin: 0;
     padding: 0;
     background-color: #222;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .music-player{
-    --primary-color: #ddd;
-    --secondary-color: #999;
+    --tertiary-color: #ddd;
+    --quaternary-color: #999;
     --green-color: #2d5;
     --padding: 1em;
     background-color: #111;
@@ -23,17 +22,31 @@ body{
     align-items: center;
     position: relative;
     
-    height: 7rem;
+    height: 5rem;
     padding: var(--padding);
-    color: var(--primary-color);
+    color: var(--tertiary-color);
 }
 
 i {
-    color: var(--secondary-color);
+    color: var(--quaternary-color);
 }
 
 i:hover {
     color: var(--green-color);
+}
+
+
+
+.song-bar{
+    position: absolute;
+    left: var(--padding);
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    width: 25%;
 }
 
 .song-infos {
@@ -43,20 +56,8 @@ i:hover {
 }
 
 
-.song-bar{
-    position: absolute;
-    left: var(--padding);
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 1.5rem;
-    width: 25%;
-}
-
 .image-container{
-    --size: 4.5em;
+    --size: 3.0em;
     flex-shrink: 0;
     width: var(--size);
     height: var(--size);
@@ -81,7 +82,7 @@ i:hover {
 }
 
 .artist {
-    color: var(--secondary-color);
+    color: var(--quaternary-color);
 }
 
 .icons {
@@ -90,16 +91,18 @@ i:hover {
 }
 
 .progress-controller {
+    
     width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     gap: 1.5em;
-    color: var(--secondary-color);
+    color: var(--quaternary-color);
 }
 
 .control-buttons {
+   
     display: flex;
     align-items: center;
     gap: 2em;
@@ -107,10 +110,12 @@ i:hover {
 
 .play-pause {
     display: inline-block;
-    padding: 1em;
-    background-color: var(--primary-color);
+    padding: 5%;
+    background-color: var(--tertiary-color);
     color: #111;
-    border-radius: 50%;
+    border-radius: 100%;
+    
+    
     
 }
 
@@ -124,25 +129,27 @@ i:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 1em;
 }
 
 .progress-bar {
+    
     height: 4px;
     border-radius: 10px;
     width: 30%;
     background-color: #ccc4;
 }
 
-.progress {
+.progress{
     position: relative;
     height: 100%;
     width: 30%;
     border-radius: 10px;
-    background-color: var(--secondary-color);
+    background-color: var(--quaternary-color);
+   
 }
 
-.progress-bar:hover .progress {
+.progress-bar .progress{
     background-color: var(--green-color);
 }
 
@@ -154,7 +161,7 @@ i:hover {
     height: var(--size);
     right: 0;
     border-radius: 50%;
-    background-color: var(--primary-color);
+    background-color: var(--tertiary-color);
     transform: translate(50%, calc(2px - 50%));
 }
 
@@ -179,3 +186,4 @@ i:hover {
 .volume-bar .progress-bar:hover .progress::after {
     --size: .8em;
 }
+
