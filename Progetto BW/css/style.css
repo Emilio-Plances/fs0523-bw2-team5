@@ -11855,38 +11855,74 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+/*@font-face {
+      font-family: "Circular";
+      src: url(../fonts/CircularStd-Book.otf);
+      font-weight: 400;
+      font-style: normal;
+}
+@font-face {
+      font-family: "Circular";
+      src: url(../fonts/CircularStd-Bold.otf);
+      font-weight: 700;
+      font-style: normal;
+}*/
+@font-face {
+  font-family: "Circular";
+  src: url(../fonts/CircularStd-Black.otf);
+  font-weight: 900;
+  font-style: normal;
+}
+#pd {
+  background-color: #181818;
+  padding-left: 20px;
+}
+
 .contenitore {
   background-image: url(https://th.bing.com/th/id/OIP.eJXsMhozoC3rm97gLms6RgHaE8?w=234&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7);
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  height: auto;
+  height: 570px;
+}
+.contenitore .pos {
+  position: relative;
+  top: 350px;
 }
 .contenitore h1, .contenitore .h1 {
   color: white;
-  font-size: 40px;
+  font-size: 80px;
+  font-weight: 700;
   margin-bottom: 0;
 }
 
 .logo {
+  margin-top: 20px;
+  margin-left: 20px;
   color: #2590f5;
 }
 
 .text {
-  font-size: 5px;
+  font-size: 20px;
   color: white;
   margin-left: 10px;
 }
 
-.bold {
+.bold, .bold2 {
   color: white;
   font-weight: bold;
-  font-size: 9px;
-  padding-left: 10px;
+  font-size: 19px;
+  margin-left: 20px;
+  margin-bottom: auto;
 }
 
 .cont2 {
   background-color: #181818;
+}
+.cont2 .ascolto {
+  justify-content: space-between;
+  max-width: 30%;
+  margin: 20px 0;
 }
 .cont2 .play {
   background-color: #1fdf64;
@@ -11914,4 +11950,61 @@ textarea.form-control-lg {
 .cont3 {
   color: white;
   background-color: #181818;
+}
+
+.sotcont {
+  max-width: 70%;
+}
+
+.t5 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.hov:hover {
+  background-color: #51544e;
+}
+
+.visi {
+  visibility: hidden;
+}
+
+.text2 {
+  font-family: "circular", serif;
+  font-weight: 400;
+  color: white;
+}
+
+.text3 {
+  color: white;
+  font-family: "circular", serif;
+  font-weight: 700;
+}
+
+.cont4 {
+  margin: 0 10px;
+}
+
+.text5 {
+  color: white;
+  margin-left: 90px;
+}
+
+.tra {
+  background-color: #51544e;
+  max-width: 80%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.bold2 {
+  margin-left: 82px;
+}
+
+.immg {
+  border-radius: 100%;
+  margin-bottom: 10px;
+  margin-top: 30px;
+  margin-left: 30px;
 }/*# sourceMappingURL=style.css.map */
