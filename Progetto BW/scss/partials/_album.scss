@@ -37,12 +37,67 @@
 }
 
 .bi.bi-shuffle:hover,
-.bi.bi-suit-heart:hover,
+.heart.bi.bi-heart:hover,
 .bi.bi-download:hover,
 .bi.bi-three-dots:hover,
 .elenco:hover {
   color: white;
 }
+
+.casualIcon,
+.iconHeart,
+.iconDownload,
+.iconOption {
+  position: relative;
+}
+
+.tooltip-casualIcon,
+.tooltip-iconDownload,
+.tooltip-iconHeart,
+.tooltip-iconOption {
+  visibility: hidden;
+  position: absolute;
+  z-index: 1;
+  color: white;
+  background-color: $dark;
+  border-radius: 10px;
+  padding: 4px;
+}
+
+.tooltip-casualIcon {
+  top: -25px;
+  left: -51px;
+  width: 198px;
+}
+
+.tooltip-iconHeart {
+  top: -25px;
+  left: -51px;
+  width: 140px;
+}
+
+.tooltip-iconDownload {
+  top: -25px;
+  left: -22px;
+  max-width: 89px;
+}
+
+.tooltip-iconOption {
+  top: -25px;
+  left: -28px;
+  width: 80px;
+}
+
+
+
+.casualIcon:hover .tooltip-casualIcon,
+.iconHeart:hover .tooltip-iconHeart,
+.iconDownload:hover .tooltip-iconDownload,
+.iconOption:hover .tooltip-iconOption {
+  visibility: visible;
+}
+
+
 
 .imageAlbum a .rounded-3:hover,
 .iconPlayCircle:hover {
@@ -60,7 +115,8 @@
 .indice,
 .title,
 .rank,
-.durataValue {
+.durataValue,
+.heart {
   color: #838383;
 }
 
@@ -98,7 +154,7 @@ a.title:hover {
 
 .playBlack.bi.bi-play-fill.fs-4 {
   position: absolute;
-  top: -6px;
+  top: -10px;
   right: -10px;
 }
 
@@ -106,7 +162,20 @@ a.title:hover {
 .filled-heart,
 .threePoints,
 .playBlack.bi.bi-play-fill.fs-4 {
-    opacity: 0;
+  opacity: 0;
+}
+
+.box-hearts {
+  position: relative;
+  left: 79px;
+  top: -8px;
+  width: 50px;
+}
+
+.heart,
+.filled-heart {
+  position: absolute;
+  right: 0;
 }
 
 .filled-heart {
@@ -115,6 +184,31 @@ a.title:hover {
 
 .areatrack:hover .heart,
 .areatrack:hover .threePoints,
-.areatrack:hover .playBlack.bi.bi-play-fill.fs-4{
-  opacity:1; 
-};
+.areatrack:hover .playBlack.bi.bi-play-fill.fs-4 {
+  opacity: 1;
+}
+
+.dropdown-menu .btnIcon {
+  color: #838383;
+}
+
+.dropdown-menu .btnIcon:hover {
+  color: white;
+  background-color: rgba(243, 236, 236, 0.122);
+}
+
+@media screen and (max-width:703px) {
+
+  .box-hearts {
+    left: 47px;
+    top: -8px;
+  }
+}
+
+@media screen and (max-width:466px) {
+
+  .box-hearts {
+    left: 15px;
+    top: -8px;
+  }
+}
