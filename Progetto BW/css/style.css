@@ -12031,6 +12031,16 @@ aside {
   padding-left: 25px;
 }
 
+#add-button, #arrow-button {
+  background-color: #181818;
+  border: 0px;
+  color: #999;
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  font-size: 17px;
+}
+
 #add-button,
 #arrow-button {
   background-color: #181818;
