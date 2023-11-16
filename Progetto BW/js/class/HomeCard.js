@@ -96,7 +96,8 @@ export class HomeCard{
 
             this.getAlbum(this.albumID)
             .then(album=>{
-            new Album(album.cover_big, album.title, album.tracks, album.release_date, album.artist.id, album.artist.name)
+            new Album(album.cover_big, album.title, album.tracks, album.release_date, album.artist.id, 
+               album.artist.name,album.nb_tracks)
             });    
          }) 
       })
@@ -115,7 +116,6 @@ export class HomeCard{
          }); 
       })
    }
-
    getArtist(idArtist){
       return fetch(`${this.API}artist/${idArtist}`,{
          "method": "GET",
@@ -126,6 +126,19 @@ export class HomeCard{
       .then(res=>res.json())
       .then(artist=>{
          return artist;
+      })
+   }
+   getAlbum(idAlbum){
+      return fetch(`${this.API}album/${idAlbum}`,{
+         "method": "GET",
+         "headers": {
+            "Content-Type": "application/json"
+         }
+      })
+      .then(res=>res.json())
+      .then(album=>{
+         console.log(album);
+         return album;
       })
    }
 }

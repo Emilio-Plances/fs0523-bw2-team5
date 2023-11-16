@@ -3,7 +3,7 @@
     .addFriends {
         background-color: $dark;
         max-width: 400px;
-        height:951px;
+        height:963px;
     }
 
     .boxAttivitaAmici {
@@ -168,11 +168,7 @@
     }
 }
 @media screen and (max-width:1300px){
-    .boxAttivitaAmici,
-    .addFriends,#nav-bar-users{
+    #right-column{
         display:none;
-    }
-    #changing-box{
-        width:100%;
     }
 }

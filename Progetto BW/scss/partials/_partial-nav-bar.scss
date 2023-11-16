@@ -1,5 +1,16 @@
 #navbar {
-    
+    height:60px;
+
+    #non-si-sposta{
+        padding-top: 13px;
+    }
+    .progress-controller{
+        margin-top: 12px;
+    }
+    #nav-bar-user::after{
+        display:none;
+    }
+
     #arrow-back,
     #arrow-forward,
     #nav-bar-bell,

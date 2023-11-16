@@ -1,6 +1,7 @@
 import {SearchTrack} from "./class/SearchTrack.js";
 import {HomeCard} from "./class/HomeCard.js";
 import {Library} from "./class/Library.js";
+
 const API=`https://striveschool-api.herokuapp.com/api/deezer/`;
 const ALGORITMO=[{
    id:92,
@@ -75,15 +76,19 @@ let homeButton=document.querySelector(`#home-button`);
 let input= document.querySelector(`#search-bar`);
 let plusButton = document.getElementById("arrow-button");
 let leftColumn = document.getElementById("left-column");
-
 let searchButton=document.getElementById('search-button')
 let closeBox = document.querySelector('#closeBox');
-let boxAttivitaAmici = document.querySelector('.boxAttivitaAmici.p-3.rounded-3');
-
+let rightColumn = document.querySelector('#right-column');
+let usersButton = document.querySelector('#nav-bar-users');
+let justFirstTime=true;
 
 closeBox.addEventListener('click', () => {
-    boxAttivitaAmici.classList.add('hidden');
+   rightColumn.classList.add('hidden');
 });
+
+usersButton.addEventListener('click',()=>{
+   rightColumn.classList.remove('hidden');
+})
 
 homeButton.addEventListener(`click`,()=>{
    input.classList.add('hidden');
@@ -113,7 +118,7 @@ plusButton.addEventListener("click", function () {
    leftColumn.classList.toggle("col-5");
 });
 
-getHome();
+getHome()
 
 function getSearch(query){
    query=query.replace(" ", "");
@@ -128,7 +133,7 @@ function getSearch(query){
    .then(risultatiRicerca=>{
       let boxTrack=document.querySelector(`#central-box`);
       resetContainer(boxTrack);
-
+      console.log(risultatiRicerca);
       risultatiRicerca.data.forEach(element=>{
          let title=element.title;
          let artistName=element.artist.name;
@@ -143,7 +148,8 @@ function getSearch(query){
 
 function getHome() {
    getHomeTemplate();
-   console.dir(centralBox);
+   let i=0;
+   
    ALGORITMO.forEach(element=>{
       fetch(`${API}${element.type}/${element.id}`,{
          "method": "GET",
@@ -153,50 +159,57 @@ function getHome() {
       })
     .then(res=>res.json())
     .then(dato=>{
-      console.log(dato);
-      let name;let artist;let immagine;let container; let artistID;
-      let song;let albumID;let release;
+      let name;let artist;let immagine;let container; 
+      let song;let albumID;let release;let artistID;
+      
       let libraryContainer=document.querySelector(`#library-container`);
+
       if(element.type==`artist`){
          name=dato.name;
-         immagine=dato.picture_medium;
          artist=`Artist`;
+         immagine=dato.picture_medium;
          artistID=dato.id;
          container=document.querySelector(`#artist-home-container`);
-      }
-      if(element.type==`album`){
-         name=dato.title;
-         albumID=dato.id;
-         release=dato.release_date;
-         artist=dato.artist.name;
-         artistID=dato.artist.id;
-         immagine=dato.cover_medium;
-         container=document.querySelector(`#album-home-container`);
-      }
-      if(element.type==`track`){
+      }else{
          name=dato.title;
          artist=dato.artist.name;
          artistID=dato.artist.id;
-         release=dato.release_date;
-         immagine=dato.album.cover_medium;
-         song=dato.preview;
-         container=document.querySelector(`#track-home-container`);
+         if(element.type==`album`){
+            
+            immagine=dato.cover_medium;
+            albumID=dato.id;
+            release=dato.release_date;
+            container=document.querySelector(`#album-home-container`);
+         }
+         if(element.type==`track`){
+            name=dato.title;
+            immagine=dato.album.cover_medium;
+            release=dato.release_date;
+            song=dato.preview;
+            container=document.querySelector(`#track-home-container`);
+         }
       }
-      new Library(API, name, artist, immagine, libraryContainer, artistID, song, albumID, release);
-      new Library(API, name, artist, immagine, libraryContainer, artistID, song, albumID, release);
-
-      new HomeCard(API, name, artist, immagine, container, artistID, song, albumID);
+      
+      if(justFirstTime){
+         new Library(API, name, artist, immagine, libraryContainer, artistID, song, albumID, release,element.type);
+         i++;
+         if(i==ALGORITMO.length){
+            justFirstTime=false;
+         }
+      }
+      new HomeCard(API, name, artist, immagine, container, artistID, song, albumID,);
     })
-   }) 
+    
+   })
+      
+   
 }
 
 function getHomeTemplate(){
    let temp= document.querySelector(`#home-template`);
    let clone= temp.content.cloneNode(true);
    centralBox.append(clone);
-};
-
-
+}
 
 function resetContainer(container){
    while(container.firstChild){
