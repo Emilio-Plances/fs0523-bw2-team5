@@ -12597,7 +12597,7 @@ i {
 }
 
 i:hover {
-  color: var(--green-color);
+  color: white;
 }
 
 .song-bar {
@@ -12749,6 +12749,10 @@ i:hover {
 
 .volume-bar .progress-bar:hover .progress::after {
   --size: .8em;
+}
+
+.play-pause-circle:hover {
+  transform: scale(1.1);
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -31,10 +31,8 @@ i {
 }
 
 i:hover {
-  color: var(--green-color);
+  color: white;
 }
-
-
 
 .song-bar {
   position: absolute;
@@ -107,7 +105,7 @@ i:hover {
   gap: 2em;
 }
 
-.play-pause-circle{
+.play-pause-circle {
   height: 33px;
   width: 33px;
   line-height: 33px;
@@ -173,11 +171,11 @@ i:hover {
   gap: 1em;
 }
 
-.central-button-player{
+.central-button-player {
   font-size: 1.6em;
 }
 
-.volume-bar{
+.volume-bar {
   display: flex;
   align-items: center;
   gap: .7em;
@@ -189,4 +187,10 @@ i:hover {
 
 .volume-bar .progress-bar:hover .progress::after {
   --size: .8em;
+}
+
+.play-pause-circle {
+  &:hover {
+    transform: scale(1.1);
+  }
 }
