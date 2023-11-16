@@ -1,7 +1,6 @@
 let button1 = document.getElementById('button1');
 let button2 = document.getElementById('button2');
 
-
 button1.addEventListener('click', function (e) {
     e.preventDefault();
     LINK = `https://striveschool-api.herokuapp.com/api/deezer/track/`
@@ -26,33 +25,32 @@ async function getSong() {
     }).then(res => res.json())
         .then(track => {
             initMusicPlayer(track);
-        })
+        })     
 }
 
-async function initMusicPlayer(track){
+async function initMusicPlayer(track) {
     document.querySelector('.musicPlayerTitle ').innerHTML = track.title
     document.querySelector('.musicPlayerArtist').innerHTML = track.artist.name
     document.querySelector('.imgMusicPlayer').src = track.album.cover_small
     audioPlayer.src = track.preview
-
+    audioPlayer.play();
+    playPauseButton.classList.toggle('bi-play-fill');
+    playPauseButton.classList.toggle('ms-1');
+    playPauseButton.classList.toggle('bi-pause-fill');
 }
-
-
-
 
 let audioPlayer = new Audio();
 
 let playPauseButton = document.getElementById('play');
 
 playPauseButton.addEventListener('click', function () {
+    playPauseButton.classList.toggle('bi-play-fill');
+    playPauseButton.classList.toggle('ms-1');
+    playPauseButton.classList.toggle('bi-pause-fill');
     if (audioPlayer.paused) {
         audioPlayer.play();
-        playPauseButton.classList.remove('bi-play-fill');
-        playPauseButton.classList.add('bi-pause-fill');
     } else {
         audioPlayer.pause();
-        playPauseButton.classList.remove('bi-pause-fill');
-        playPauseButton.classList.add('bi-play-fill');
     }
 });
 
@@ -81,35 +79,11 @@ document.querySelector('.progress-container').addEventListener('click', function
     audioPlayer.currentTime = percent * audioPlayer.duration;
 });
 
-let volumeSlider = document.querySelector('.volume-slider');
-
-volumeSlider.addEventListener('input', function () {
-    audioPlayer.volume = volumeSlider.value;
-});
-
-audioPlayer.volume = volumeSlider.value;
-
-// Pulsante per passare alla canzone successiva
-let skipNextButton = document.querySelector('.bi-skip-end-fill');
-skipNextButton.addEventListener('click', function () {
-    // Qui puoi implementare il codice per passare alla canzone successiva
-    // Ad esempio, puoi cambiare l'URL del file MP3 e avviare la riproduzione
-});
-
-// Pulsante per passare alla canzone precedente
-let skipPrevButton = document.querySelector('.bi-skip-start-fill');
-skipPrevButton.addEventListener('click', function () {
-    // Qui puoi implementare il codice per passare alla canzone precedente
-    // Ad esempio, puoi cambiare l'URL del file MP3 e avviare la riproduzione
-});
-
-
 let loopButton = document.querySelector('.bi-arrow-repeat');
 loopButton.addEventListener('click', function () {
     audioPlayer.loop = !audioPlayer.loop;
     updateButtonState(loopButton, audioPlayer.loop);
 });
-
 
 function updateButtonState(button, isActive) {
     if (isActive) {
@@ -119,29 +93,9 @@ function updateButtonState(button, isActive) {
     }
 }
 
-
-
-
-// Pulsante per la riproduzione casuale
-let shuffleButton = document.querySelector('.bi-shuffle');
-shuffleButton.addEventListener('click', function () {
-    toggleActiveGreen(shuffleButton);
-    isShuffleActive = !isShuffleActive;
-    updateButtonState(shuffleButton, isShuffleActive);
-
-
-
-
-
-
-});
-
 function toggleActiveGreen(element) {
     element.classList.toggle('activeGreen');
 };
-
-
-
 
 
 

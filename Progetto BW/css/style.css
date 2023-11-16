@@ -12643,7 +12643,7 @@ i {
 }
 
 i:hover {
-  color: var(--green-color);
+  color: white;
 }
 
 .song-bar {
@@ -12750,7 +12750,7 @@ i:hover {
 .progress {
   position: relative;
   height: 100%;
-  width: 30%;
+  width: 1%;
   border-radius: 10px;
   background-color: var(--quaternary-color);
 }
@@ -12783,20 +12783,30 @@ i:hover {
   font-size: 1.6em;
 }
 
-.volume-slider {
-  display: none;
+.volume-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
 }
 
-.custom-volume-slider {
-  width: 100px;
-  height: 5px;
-  background-color: #363636;
-  border-radius: 5px;
-  position: relative;
+.volume-bar .progress-bar {
+  width: 6em;
 }
 
+<<<<<<< HEAD
 .custom-volume-slider i {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }/*# sourceMappingURL=style.css.map */
+=======
+.volume-bar .progress-bar:hover .progress::after {
+  --size: .8em;
+}
+
+.play-pause-circle:hover {
+  transform: scale(1.1);
+}
+
+/*# sourceMappingURL=style.css.map */
+>>>>>>> 89a75122a68b4417cc2b616d4b0f979c0ba2ce3f
