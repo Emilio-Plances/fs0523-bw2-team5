@@ -18,152 +18,249 @@ $sfondo: #51544e;
       font-weight: 900;
       font-style: normal;
 }
-#pd {
+#artist-box {
       background: linear-gradient($sfondo, $dark, black);
-}
-.contenitore {
-      background-image: url(https://th.bing.com/th/id/OIP.eJXsMhozoC3rm97gLms6RgHaE8?w=234&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 100%;
-      height: 380px;
-      .pos {
-            position: relative;
-            top: 188px;
-            left: 14px;
+
+      .contenitore {
+            background-image: url(https://th.bing.com/th/id/OIP.eJXsMhozoC3rm97gLms6RgHaE8?w=234&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 380px;
+            .pos {
+                  position: relative;
+                  top: 188px;
+                  left: 14px;
+            }
+            h1 {
+                  color: $scritte;
+
+                  font-size: 80px;
+                  font-weight: 700;
+                  margin-bottom: 0;
+            }
       }
-      h1 {
+      .logo {
+            margin-top: 20px;
+            margin-left: 20px;
+            color: #2590f5;
+      }
+      .text {
+            font-size: 20px;
             color: $scritte;
-
-            font-size: 80px;
-            font-weight: 700;
-            margin-bottom: 0;
+            margin-left: 10px;
       }
-}
-.logo {
-      margin-top: 20px;
-      margin-left: 20px;
-      color: #2590f5;
-}
-.text {
-      font-size: 20px;
-      color: $scritte;
-      margin-left: 10px;
-}
-.bold {
-      color: $scritte;
-      font-weight: bold;
-      font-size: 19px;
-      margin-left: 20px;
-      margin-bottom: auto;
-}
-.cont2 {
-      justify-content: space-between;
-      max-width: 40%;
-      margin: 20px 21px;
-}
-.playBlack {
-      color: black;
-      font-size: 2em;
-}
-
-.circle {
-      width: 58px;
-      /*height: auto;
-      text-align: center;
-      line-height: 50px;
-      background-color: $secondary;
-      border-radius: 100%;
-
-      position: absolute;*/
-}
-.random {
-      color: $scritte;
-}
-
-.btn {
-      color: $scritte;
-      border: 1px solid rgba(255, 255, 255, 0.281);
-      padding: 5px 10px;
-      margin: 0 10px;
-      border-radius: 20px;
-      font-size: 15px;
-
-      &:hover {
-            border: 1px solid rgb(255, 255, 255);
+      .bold {
             color: $scritte;
-      }
-}
-#punti {
-      color: rgba(255, 255, 255, 0.41);
-      margin-right: 10px;
-}
-.cont3 {
-      color: $scritte;
-}
-.sotcont {
-}
-.t5 {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-}
-.hov:hover {
-      background-color: $sfondo;
-}
-.visi {
-      display: none;
-
-      &:hover {
-            display: block;
-      }
-}
-.text6 {
-      font-size: smaller;
-      font-weight: bold;
-      color: $scritte;
-      margin-left: 21px;
-}
-.text3 {
-      margin-left: 21px;
-      color: $scritte;
-      font-size: x-large;
-      font-weight: bold;
-}
-.cont4 {
-      margin: 0 10px;
-}
-.text5 {
-      color: $scritte;
-      margin-left: 90px;
-}
-.tra {
-      background-color: $sfondo;
-
-      height: auto;
-      border-radius: 20px;
-}
-.bold2 {
-      @extend.bold;
-}
-.immg {
-      border-radius: 100%;
-      margin-bottom: 10px;
-      margin-top: 30px;
-      margin-left: 30px;
-}
-.imm {
-      position: relative;
-      bottom: 10px;
-      right: 7px;
-}
-
-@media only screen and (min-width: 560px) {
-      .bot {
-            max-width: 35%;
+            font-weight: bold;
+            font-size: 19px;
+            margin-left: 20px;
+            margin-bottom: auto;
       }
       .cont2 {
-            max-width: 40%;
-            margin-left: 0 21px;
+            justify-content: space-between;
+            max-width: 80%;
+            margin: 20px 21px;
+      }
+      .playBlack {
+            color: black;
+            font-size: 2em;
+      }
+
+      .circle {
+            width: 60px;
+            height: auto;
+
+            text-align: center;
+            //line-height: 50px;
+            //background-color: $secondary;
+            //border-radius: 100%;
+      }
+      #random {
+            font-size: 26px;
+      }
+      .random {
+            color: $scritte;
+      }
+
+      .btn {
+            color: $scritte;
+            border: 1px solid rgba(255, 255, 255, 0.281);
+            padding: 5px 10px;
+            margin: 0 10px;
+            border-radius: 20px;
+            font-size: 15px;
+
+            &:hover {
+                  border: 1px solid rgb(255, 255, 255);
+                  color: $scritte;
+            }
+      }
+      .box-hearts {
+            // position: relative;
+            //left: 25px;
+            //top: 25px;
+            width: 50px;
+      }
+
+      .heart,
+      .filled-heart {
+            position: relative;
+            opacity: 0;
+            bottom: 30px;
+            left: 2px;
+            font-size: 18px;
+      }
+
+      .heart_artist {
+            display: block;
+            color: grey;
+            opacity: 0;
+            &:hover {
+                  color: white;
+                  opacity: 1;
+            }
+      }
+      .filled-heart {
+            color: $secondary;
+      }
+      #punti {
+            color: rgba(255, 255, 255, 0.41);
+            margin-right: 10px;
+      }
+      .cont3 {
+            color: $scritte;
+      }
+      .sotcont {
+            max-width: 88%;
+      }
+      .t5 {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 78%;
+      }
+      .hov:hover {
+            background-color: $sfondo;
+      }
+
+      .hov:hover .heart_artist {
+            opacity: 1;
+      }
+
+      .visi {
+            display: none;
+
+            &:hover {
+                  display: block;
+            }
+      }
+      .text6 {
+            font-size: smaller;
+            font-weight: bold;
+            color: $scritte;
+            margin-left: 21px;
+      }
+      .text3 {
+            margin-left: 21px;
+            color: $scritte;
+            font-size: x-large;
+            font-weight: bold;
+      }
+      .cont4 {
+            margin: 0 10px;
+      }
+      .text5 {
+            color: $scritte;
+            margin-left: 90px;
+      }
+      .tra {
+            align-items: center;
+            background-color: $sfondo;
+
+            height: auto;
+            border-radius: 20px;
+      }
+      .bold2 {
+            @extend.bold;
+      }
+      .immg {
+            border-radius: 100%;
+            margin-bottom: 10px;
+            margin-top: 30px;
+            margin-left: 30px;
+      }
+      .imm {
+            position: relative;
+            bottom: 10px;
+            right: 7px;
+      }
+      @media screen and (min-width: 529px) {
+            .bot {
+                  max-width: 59%;
+            }
+            .cont2 {
+                  max-width: 45%;
+            }
+      }
+      @media screen and (min-width: 543px) {
+            .bot {
+                  max-width: 59%;
+            }
+            .cont2 {
+                  max-width: 60%;
+            }
+      }
+
+      @media screen and (min-width: 552px) {
+            .bot {
+                  max-width: 58%;
+            }
+            .cont2 {
+                  max-width: 50%;
+                  margin-left: 0 21px;
+            }
+            .t5 {
+                  max-width: 100%;
+            }
+            .sotcont {
+                  max-width: 90%;
+            }
+            .tra {
+                  align-items: start;
+            }
+      }
+      @media screen and (min-width: 650px) {
+            .bot {
+                  max-width: 50%;
+            }
+            .cont2 {
+                  max-width: 40%;
+            }
+      }
+      @media screen and (min-width: 1024px) {
+            .bot {
+                  max-width: 35%;
+            }
+            .cont2 {
+                  max-width: 25%;
+            }
+      }
+      @media screen and (min-width: 1440px) {
+            .bot {
+                  max-width: 25%;
+            }
+            .cont2 {
+                  max-width: 20%;
+            }
+      }
+
+      @media screen and (min-width: 1936px) {
+            .bot {
+                  max-width: 20%;
+            }
+            .cont2 {
+                  max-width: 15%;
+            }
       }
 }
