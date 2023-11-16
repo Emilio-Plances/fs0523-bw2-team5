@@ -12483,11 +12483,62 @@ a.fw-bold.link-underline {
 }
 
 .bi.bi-shuffle:hover,
-.bi.bi-suit-heart:hover,
+.heart.bi.bi-heart:hover,
 .bi.bi-download:hover,
 .bi.bi-three-dots:hover,
 .elenco:hover {
   color: white;
+}
+
+.casualIcon,
+.iconHeart,
+.iconDownload,
+.iconOption {
+  position: relative;
+}
+
+.tooltip-casualIcon,
+.tooltip-iconDownload,
+.tooltip-iconHeart,
+.tooltip-iconOption {
+  visibility: hidden;
+  position: absolute;
+  z-index: 1;
+  color: white;
+  background-color: #181818;
+  border-radius: 10px;
+  padding: 4px;
+}
+
+.tooltip-casualIcon {
+  top: -25px;
+  left: -51px;
+  width: 198px;
+}
+
+.tooltip-iconHeart {
+  top: -25px;
+  left: -51px;
+  width: 140px;
+}
+
+.tooltip-iconDownload {
+  top: -25px;
+  left: -22px;
+  max-width: 89px;
+}
+
+.tooltip-iconOption {
+  top: -25px;
+  left: -28px;
+  width: 80px;
+}
+
+.casualIcon:hover .tooltip-casualIcon,
+.iconHeart:hover .tooltip-iconHeart,
+.iconDownload:hover .tooltip-iconDownload,
+.iconOption:hover .tooltip-iconOption {
+  visibility: visible;
 }
 
 .imageAlbum a .rounded-3:hover,
@@ -12558,12 +12609,13 @@ a.title:hover {
 
 .box-hearts {
   position: relative;
-  left: 48px;
+  left: 79px;
   top: -8px;
   width: 50px;
 }
 
-.heart, .filled-heart {
+.heart,
+.filled-heart {
   position: absolute;
   right: 0;
 }
@@ -12578,6 +12630,27 @@ a.title:hover {
   opacity: 1;
 }
 
+.dropdown-menu .btnIcon {
+  color: #838383;
+}
+
+.dropdown-menu .btnIcon:hover {
+  color: white;
+  background-color: rgba(243, 236, 236, 0.122);
+}
+
+@media screen and (max-width: 703px) {
+  .box-hearts {
+    left: 47px;
+    top: -8px;
+  }
+}
+@media screen and (max-width: 466px) {
+  .box-hearts {
+    left: 15px;
+    top: -8px;
+  }
+}
 * {
   box-sizing: border-box;
   font-family: "circular std book", sans-serif;
