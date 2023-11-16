@@ -1,148 +1,154 @@
-.hidden {
-  display: none;
-}
+#left-column {
 
-.width-left {
-  min-width: 450px;
-}
+  .width-left {
+    min-width: 450px;
+  }
+  aside{
+    height: 835px;
+  }
+  aside #home-button,
+  #search-button,
+  #list-lib {
+    cursor: pointer;
+    border: 0px;
+    color: #999;
+    font-weight: bold;
+    font-size: 24px;
+    padding-left: 25px;
+  }
+  .library-card-img{
+    width:60px;
+    height: 60px;
+  }
+  #library-container{
+    overflow-y: scroll;
+    height:623px;
+  }
+  #search-button:hover,
+  #home-button:hover,
+  #libreria:hover,
+  #add-button:hover,
+  #arrow-button:hover {
+    color: $light;
+  }
 
-aside {
-  height: 70vh;
-}
+  #libreria {
+    background-color: $dark;
+    border: 0px;
+    color: #999;
+    font-weight: bold;
+    font-size: 24px;
+    padding-left: 25px;
+  }
 
-#home-button,
-#search-button,
-#list-lib {
-  cursor: pointer;
-  border: 0px;
-  color: #999;
-  font-weight: bold;
-  font-size: 24px;
-  padding-left: 25px;
-}
-
-#search-button:hover,
-#home-button:hover,
-#libreria:hover,
-#add-button:hover,
-#arrow-button:hover {
-  color: $light;
-}
-
-#libreria {
-  background-color: $dark;
-  border: 0px;
-  color: #999;
-  font-weight: bold;
-  font-size: 24px;
-  padding-left: 25px;
-}
-#add-button,#arrow-button{
+  #add-button,
+  #arrow-button {
     background-color: $dark;
     border: 0px;
     color: #999;
     width: 35px;
     height: 35px;
     border-radius: 100%;
-    font-size:17px;
-    
-}
+    font-size: 17px;
 
-#add-button,
-#arrow-button {
-  background-color: $dark;
-  border: 0px;
-  color: #999;
-  font-size: 25px;
-  border-radius: 100%;
+  }
 
-}
+  #add-button,
+  #arrow-button {
+    background-color: $dark;
+    border: 0px;
+    color: #999;
+    font-size: 25px;
+    border-radius: 100%;
 
-#add-button:hover,
-#arrow-button:hover {
-  background-color: #232323;
+  }
 
-}
+  #add-button:hover,
+  #arrow-button:hover {
+    background-color: #232323;
 
-#artist-track-p {
-  color: grey;
-}
+  }
 
-#playlist-button,
-#artist-button {
-  background-color: #232323;
-  border: 0px;
-  color: white;
-  padding: 8px;
-  border-radius: 100px;
-}
+  #artist-track-p {
+    color: grey;
+  }
 
-#playlist-button:hover,
-#artist-button:hover {
-  background-color: #383737;
-}
+  #playlist-button,
+  #artist-button {
+    background-color: #232323;
+    border: 0px;
+    color: white;
+    padding: 8px;
+    border-radius: 100px;
+  }
 
-.dropdown-item:hover {
-  background-color: #5d5d5d;
-}
+  #playlist-button:hover,
+  #artist-button:hover {
+    background-color: #383737;
+  }
 
-#dropdownMenuLink {
-  color: #999;
-  cursor: pointer;
-  border: 0px;
+  .dropdown-item:hover {
+    background-color: #5d5d5d;
+  }
 
-  font-weight: bold;
-  font-size: 24px;
-  padding-left: 25px;
-}
+  #dropdownMenuLink {
+    color: #999;
+    cursor: pointer;
+    border: 0px;
 
-#dropdown-menu {
-  background-color: #383737;
-}
+    font-weight: bold;
+    font-size: 24px;
+    padding-left: 25px;
+  }
 
-.li-drop {
-  color: #999;
-  font-size: 12px;
-}
+  #dropdown-menu {
+    background-color: #383737;
+  }
 
-#list-lib {
-  font-size: 16px;
-}
+  .li-drop {
+    color: #999;
+    font-size: 12px;
+  }
 
-#list-lib:hover {
-  color: white;
-}
+  #list-lib {
+    font-size: 16px;
+  }
 
-#search-lib {
-  font-size: 16px;
-  background-color: $dark;
-  border: 0px;
-  color: #999;
+  #list-lib:hover {
+    color: white;
+  }
 
-  border-radius: 100%;
-}
+  #search-lib {
+    font-size: 16px;
+    background-color: $dark;
+    border: 0px;
+    color: #999;
 
-#search-lib:hover {
-  color: white;
-  background-color: #232323;
+    border-radius: 100%;
+  }
 
-}
+  #search-lib:hover {
+    color: white;
+    background-color: #232323;
 
-#p-artist,
-.rip-date,
-.add-date {
-  color: #999;
-}
+  }
 
-.your-library:hover {
-  background-color: #232323;
-  cursor: pointer;
-}
+  .p-artist,
+  .rip-date,
+  .add-date {
+    color: #999;
+  }
 
-.dropdown-toggle::after {
-  display: none;
-}
+  .your-library:hover {
+    background-color: #232323;
+    cursor: pointer;
+  }
 
-.reverse-arrow {
-  transform: rotate(180deg);
+  .dropdown-toggle::after {
+    display: none;
+  }
+
+  .reverse-arrow {
+    transform: rotate(180deg);
+  }
 }

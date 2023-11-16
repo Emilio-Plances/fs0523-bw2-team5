@@ -1,12 +1,20 @@
 *{
    box-sizing: border-box;
+   font-family: "circular std book", sans-serif;
 }
 .hidden{
    display: none;
 }
 #central-box{
-   background-color: $primary;
+   background: linear-gradient(180deg, rgba(24,24,24,0.9248074229691877) 51%, rgba(15,15,15,0.6699054621848739) 100%);
 }
+ 
+ body {
+   margin: 0;
+   padding: 0;
+   background-color: black;
+ }
+ 
 img{
    max-width: 100%;
    max-height: 100%;
@@ -15,5 +23,40 @@ a{
    text-decoration: none;
    &:hover{
       text-decoration: underline;
+   }
+}
+
+#changing-box,#left-column,#right-column{
+   height:88vh;
+}
+#changing-box{
+   flex-shrink:2;
+}
+
+#central-box,#library-container,#right-column{
+
+   &::-webkit-scrollbar {
+      width: 10px;
+      height:100px;
+   }
+   
+   &::-webkit-scrollbar-track {
+      background: transparent;
+   }
+   
+   &::-webkit-scrollbar-thumb {
+      background-color: #00000000;
+      border-radius: 10px;
+      transition: background-color linear 0.6s;
+   }
+   
+   &:hover{
+      &::-webkit-scrollbar-thumb{
+         background-color: #808080;
+      }
+   }
+   
+   &::-webkit-scrollbar-thumb:hover {
+      background: #555;
    }
 }
