@@ -122,6 +122,7 @@ $sfondo: #51544e;
       font-size: smaller;
       font-weight: bold;
       color: $scritte;
+      margin-left: 21px;
 }
 .text3 {
       margin-left: 21px;
@@ -160,5 +161,9 @@ $sfondo: #51544e;
 @media only screen and (min-width: 560px) {
       .bot {
             max-width: 35%;
+      }
+      .cont2 {
+            max-width: 40%;
+            margin-left: 0 21px;
       }
 }
