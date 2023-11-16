@@ -1,4 +1,5 @@
 import {Artist} from "./Artist.js";
+import {Album} from "./Album.js";
 
 export class HomeCard{
    constructor(_API, _name, _artist, _immagine, _container, _artistID, _song=``, _albumID=``){

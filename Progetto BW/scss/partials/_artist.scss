@@ -1,17 +1,4 @@
-$scritte: #ffff;
-$sfondo: #51544e;
-/*@font-face {
-      font-family: "Circular";
-      src: url(../fonts/CircularStd-Book.otf);
-      font-weight: 400;
-      font-style: normal;
-}
-@font-face {
-      font-family: "Circular";
-      src: url(../fonts/CircularStd-Bold.otf);
-      font-weight: 700;
-      font-style: normal;
-}* fai breakpoint*/
+
 @font-face {
       font-family: "Circular";
       src: url(../fonts/CircularStd-Black.otf);
@@ -19,6 +6,8 @@ $sfondo: #51544e;
       font-style: normal;
 }
 #artist-box {
+      $scritte: #ffff;
+      $sfondo: #51544e;
       background: linear-gradient($sfondo, $dark, black);
 
       .contenitore {

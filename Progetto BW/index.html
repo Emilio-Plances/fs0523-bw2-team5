@@ -12,18 +12,22 @@
 
 <body>
 
-   <div class="container-fluid mt-3 border border-danger bg width-left p-0">
+   <div class="container-fluid mt-3 bg width-left p-0 m-0">
       <div class="d-flex">
-         <div class="col-3 border border-warning" id="left-column">
+         <div class="col-3 p-2" id="left-column">
             <div class="d-flex flex-column bg-dark py-3 rounded-4 row-gap-3 nav-bar mb-2">
                <div>
-                  <div id="home-button" class="d-flex align-items-center ps-4 w-100"><i
-                        class="bi bi-house-door pe-3"></i><span class="d-none d-md-block">Home</span></div>
+                  <div id="home-button" class="d-flex align-items-center ps-4 w-100">
+                     <i class="bi bi-house-door pe-3"></i>
+                     <span class="d-none d-md-block">Home</span>
+                  </div>
                </div>
                <div>
                   <div id="search-button" class="d-flex align-items-center ps-4 w-100">
-                     <label for="search-bar"><i class="bi bi-search pe-3"></i><span
-                           class="d-none d-md-inline">Cerca</span></label>
+                     <label for="search-bar">
+                        <i class="bi bi-search pe-3"></i>
+                        <span class="d-none d-md-inline">Cerca</span>
+                     </label>
                   </div>
                </div>
             </div>
@@ -32,12 +36,13 @@
             <aside class="bg-dark rounded-4 left-aside">
                <div class="d-flex align-items-center justify-content-between py-2">
                   <div>
-                     <button id="libreria" class="p-0 ms-4"><i class="bi bi-collection pe-3"></i> <span
-                           class="d-none  d-xl-inline">La tua
-                           libreria</span></button>
+                     <button id="libreria" class="p-0 ms-4">
+                        <i class="bi bi-collection pe-3"></i> 
+                        <span class="d-none  d-xl-inline">La tua libreria</span>
+                     </button>
                   </div>
                   <div class="d-flex align-items-center">
-                     <button id="add-button"> </button>
+                    
 
                      <div class="dropdown">
                         <button class="btn dropdown-toggle" type="button" id="dropdownMenuLink"
@@ -93,47 +98,12 @@
                   </div>
                </div>
 
+               <div id="library-container"></div>
 
-               <div class="your-library d-flex align-items-center ms-2 mt-3">
-                  <div class="mx-2">
-                     <img src="assets/imgs/main/image-1.jpg" alt="" height="60px">
-                  </div>
-                  <div class="text-start">
-                     <p class="text-light m-0 d-none d-lg-block">
-                        Noyz Narcos
-                     </p>
-                     <div>
-                        <p id="p-artist" class="mb-0  d-none d-lg-block">Artista</p>
-                     </div>
-
-
-                  </div>
-                  <div class="col text-center d-none add-date">
-                     <p class="d-none d-lg-block">1 apr 2023</p>
-                  </div>
-                  <div class="col-3 text-end me-4 d-none rip-date">
-                     <p class="d-none d-lg-block">1 apr 2023</p>
-                  </div>
-
-               </div>
-               <div class="your-library d-flex align-items-center ms-2 mt-3">
-                  <div class="mx-2">
-                     <img src="assets/imgs/main/image-1.jpg" alt="" height="60px">
-                  </div>
-                  <div class="text-start">
-                     <p class="text-light m-0 d-none d-lg-block">
-                        Noyz Narcos
-                     </p>
-                     <div>
-                        <p id="p-artist" class="mb-0  d-none d-lg-block">Artista</p>
-                     </div>
-
-                  </div>
-               </div>
             </aside>
          </div>
-         <div class="col-7">
-            <div id="navbar" class="container bg-dark ">
+         <div id="changing-box" class="col">
+            <div id="navbar" class="bg-dark ">
                <nav class="navbar navbar-expand-lg navbar-light">
                   <div class="container-fluid d-flex justify-content-between">
                      <div class="d-flex">
@@ -143,7 +113,6 @@
                            <input id="search-bar" class="form-control ms-2 hidden" type="search" placeholder="Cosa vuoi ascoltare" aria-label="Search">
                         </div>
                      </div>
-
                      <div class="d-flex">
                         <div class="d-flex align-items-center">
                            <div class="nav-item">
@@ -170,13 +139,11 @@
                   </div>
                </nav>
             </div>
-            <div id="central-box" class="p-2 rounded-3"></div>
+            <div id="central-box" class="p-2"></div>
          </div>
-         <div class="col-2 border border-warning">
+         <div id="right-column" class="col-2 m-0 p-2 ">
             <div class="boxAttivitaAmici p-3 rounded-3">
-
                <div class="row text-white justify-content-between align-items-baseline">
-
                   <div class="col-6">
                      <h6 class="fw-bold">Attività amici</h6>
                   </div>
@@ -212,7 +179,6 @@
                                  <p class="textPrivacy">Non pubblicheremo nulla senza il tuo consenso.Mostra e nascondi
                                     Attività amici in Impostazioni</p>
                               </div>
-
                            </div>
                         </div>
                      </div>
@@ -261,20 +227,74 @@
             </div>
          </div>
       </div>
+      <div class="music-player bg-black">
+         <div class="song-bar">
+            <div class="song-infos">
+               <div class="image-container">
+                  <img class="imgMusicPlayer" src="https://picsum.photos/200/300?random=1" alt="album cover">
+               </div>
+               <div class="song-description">
+                  <p class="musicPlayerTitle title">Titolo</p>
+                  <p class="musicPlayerArtist artist">Artista</p>
+               </div>
+            </div>
+            <div class="icons">
+               <i class="bi bi-heart"></i>
+            </div>
+         </div>
+         <div class="progress-controller">
+            <div class="control-buttons">
+               <i class="central-button-player bi bi-shuffle"></i>
+               <i class="central-button-player bi bi-skip-start-fill"></i>
+               <div class="play-pause-circle"><i class="ms-1 play-pause bi bi-play-fill" id="play"></i></div>
+               <i class="central-button-player bi bi-skip-end-fill"></i>
+               <i class="central-button-player bi bi-arrow-repeat"></i>
+            </div>
+            <div class="progress-container">
+               <span id="currentTime">0:00</span>
+               <div class="progress-bar">
+                  <div class="progress"></div>
+               </div>
+               <span id="duration">0:00</span>
+            </div>
+         </div>
+         <div class="other-features">
+            <i class="bi bi-file-play"></i>
+            <i class="bi bi-mic"></i>
+            <i class="bi bi-menu-button-wide"></i>
+            <i class="bi bi-pc-display"></i>
+            <div class="volume-bar">
+               <i class="bi bi-volume-up"></i>
+               <div class="progress-bar">
+                  <div id="progressVolume" class="progress"></div>
+               </div>
+            </div>
+            <i class="bi bi-arrows-angle-expand"></i>
+         </div>
+   
+         <div class="d-flex">
+            <button id="button1">1</button>
+            <button id="button2">2</button>
+         </div>
+      </div>
    </div>
 
    <template id="library-template">
       <div class="your-library d-flex align-items-center ms-2 mt-3">
          <div class="mx-2">
-            <img src="assets/imgs/main/image-1.jpg" alt="" height="60px">
+            <img class="library-card-img" src="assets/imgs/main/image-1.jpg" alt="" loading="lazy">
          </div>
          <div class="text-start">
-            <p class="text-light m-0  d-none d-lg-block">
-               Noyz Narcos
-            </p>
+            <p class="library-card-title text-light m-0 d-none d-lg-block">Noyz Narcos</p>
             <div>
-               <p id="p-artist" class="mb-0  d-none d-lg-block">Artista</p>
+               <p class="library-card-artist mb-0 p-artist d-none d-lg-block">Artista</p>
             </div>
+         </div>
+         <div class="col text-center hidden add-date">
+            <p class="hidden d-lg-block">1 apr 2023</p>
+         </div>
+         <div class="col-3 text-end me-4 hidden rip-date">
+            <p class="hidden library-card-release d-lg-block">1 apr 2023</p>
          </div>
       </div>
    </template>
@@ -283,7 +303,7 @@
       <div class="d-flex p-3 track-card text-white justify-content-between align-items-center mb-3">
          <div class="d-flex">
             <div>
-               <img class="img-track rounded-circle" src="https://picsum.photos/50/50?random=1" alt="#">
+               <img class="img-track rounded-circle" src="https://picsum.photos/50/50?random=1" alt="#" loading="lazy">
             </div>
             <div class="ms-3">
                <p class="name-track m-0 p-0">Titolo</p>
@@ -323,7 +343,7 @@
    <template id="card-home-template">
       <div class="card-home card p-2 pt-3 rounded-3 me-3 mb-3">
          <div class="text-center imgCard">
-            <img src="https://picsum.photos/250/250?random=1" class="home-card-img rounded-3 card-img-top" alt="...">
+            <img src="https://picsum.photos/250/250?random=1" class="home-card-img rounded-3 card-img-top" alt="..." loading="lazy">
             <div class="circle">
                <i class="ms-1 playBlack bi bi-play-fill"></i>
             </div>

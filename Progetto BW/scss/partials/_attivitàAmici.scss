@@ -1,177 +1,178 @@
-
-.boxAttivitàAmici,
-.addFriends {
-    background-color: $dark;
-    max-width: 400px;
-    min-width: 300px;
-    height: 100vh;
-}
-
-.boxAttivitàAmici {
-    position: sticky;
-    top: 0;
-    width: 100%;
-}
-
-.hidden {
-    display: none;
-}
-
-
-
-.bi.bi-person-plus,
-.bi.bi-x,
-.bi.bi-arrow-left {
-    color: #838383;
-    font-size: 25px;
-
-}
-
-.boxAttivitàAmici .row .col-3.colImg .rounded-circle {
-    height: 50px;
-    width: 50px;
-}
-
-.boxAttivitàAmici p {
-    color: rgb(199, 191, 191);
-    font-size: 0.9rem;
-}
-
-.boxAttivitàAmici .row .col-12.text-center a.btn {
-    background-color: white;
-    color: black;
-    font-size: 0.8rem;
-    padding: 0.8rem 0;
-}
-
-a.fw-bold.link-underline {
-    background-color: #4867AA;
-    font-size: 0.8rem;
-}
-
-.offcanvas-body .col-12.text-start .textPrivacy {
-    font-size: 0.7rem;
-}
-
-.tooltip-text {
-    visibility: hidden;
-    position: absolute;
-    top: -1px;
-    right: 30px;
-    z-index: 1;
-    width: 5%;
-    color: white;
-    background-color: $dark;
-    padding: 2px;
-    border-radius: 10px;
-}
-
-.tooltip-textFriends {
-    visibility: hidden;
-    position: absolute;
-    top: -1px;
-    right: 40px;
-    z-index: 1;
-    width: 30%;
-    color: white;
-    background-color: $dark;
-    padding: 2px;
-    border-radius: 10px;
-}
-
-.tooltip-text-back {
-    visibility: hidden;
-    position: absolute;
-    top: 0;
-    z-index: 1;
-    width: 5%;
-    color: white;
-    background-color: $dark;
-    padding: 2px;
-    border-radius: 10px;
-}
-
-.btn.p-0:hover .tooltip-text,
-.btn.p-0:hover .tooltip-textFriends,
-.backHover:hover .tooltip-text-back {
-    visibility: visible;
-}
-
-.bi.bi-person-plus:hover,
-.bi.bi-x:hover,
-.bi.bi-arrow-left:hover {
-    color: white;
-}
-
-.boxAttivitàAmici .col-12.text-center a.btn.rounded-5:hover,
-.boxAttivitàAmici .col-12.text-start.py-4 .fw-bold.link-underline:hover {
-    font-size: 15px;
-}
-
-@media screen and (max-width:917px) {
-
-    a.fw-bold.link-underline,
-    .boxAttivitàAmici p {
-        font-size: 0.7rem;
+#right-column {
+    .boxAttivitaAmici,
+    .addFriends {
+        background-color: $dark;
+        max-width: 400px;
+        height:951px;
     }
 
-    .offcanvas-body .col-12.text-start .textPrivacy {
-        font-size: 0.6rem;
+    .boxAttivitaAmici {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        
     }
 
-    .boxAttivitàAmici .row .col-12.text-center a.btn {
-        font-size: 0.7rem;
-        padding: 0.6rem 0;
+    .bi.bi-person-plus,
+    .bi.bi-x,
+    .bi.bi-arrow-left {
+        color: #838383;
+        font-size: 25px;
     }
 
-    .boxAttivitàAmici .row .col-3.colImg .rounded-circle {
-        height: 40px;
-        width: 40px;
+    .boxAttivitaAmici .row .col-3.colImg .rounded-circle {
+        height: 50px;
+        width: 50px;
     }
 
-    .col-6 h6.fw-bold {
+    .boxAttivitaAmici p {
+        color: rgb(199, 191, 191);
+        font-size: 0.9rem;
+    }
+
+    .boxAttivitaAmici .row .col-12.text-center a.btn {
+        background-color: white;
+        color: black;
+        font-size: 0.8rem;
+        padding: 0.8rem 0;
+    }
+
+    a.fw-bold.link-underline {
+        background-color: #4867AA;
         font-size: 0.8rem;
     }
 
-    .bi.bi-person-plus,
-    .bi.bi-x,
-    .bi.bi-arrow-left {
-        color: #838383;
-        font-size: 20px;
-
-    }
-
-}
-
-@media screen and (max-width:729px) {
-
-    a.fw-bold.link-underline,
-    .boxAttivitàAmici p {
-        font-size: 0.6rem;
-    }
-
     .offcanvas-body .col-12.text-start .textPrivacy {
-        font-size: 0.5rem;
+        font-size: 0.7rem;
     }
 
-    .boxAttivitàAmici .row .col-12.text-center a.btn {
-        font-size: 0.6rem;
-        padding: 0.6rem 0;
+    .tooltip-text {
+        visibility: hidden;
+        position: absolute;
+        top: -1px;
+        right: 30px;
+        z-index: 1;
+        width: 5%;
+        color: white;
+        background-color: $dark;
+        padding: 2px;
+        border-radius: 10px;
     }
 
-    .boxAttivitàAmici .row .col-3.colImg .rounded-circle {
-        height: 20px;
-        width: 20px;
+    .tooltip-textFriends {
+        visibility: hidden;
+        position: absolute;
+        top: -1px;
+        right: 40px;
+        z-index: 1;
+        width: 30%;
+        color: white;
+        background-color: $dark;
+        padding: 2px;
+        border-radius: 10px;
     }
 
-    .col-6 h6.fw-bold {
-        font-size: 0.6rem;
+    .tooltip-text-back {
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        width: 5%;
+        color: white;
+        background-color: $dark;
+        padding: 2px;
+        border-radius: 10px;
     }
 
-    .bi.bi-person-plus,
-    .bi.bi-x,
-    .bi.bi-arrow-left {
-        color: #838383;
+    .btn.p-0:hover .tooltip-text,
+    .btn.p-0:hover .tooltip-textFriends,
+    .backHover:hover .tooltip-text-back {
+        visibility: visible;
+    }
+
+    .bi.bi-person-plus:hover,
+    .bi.bi-x:hover,
+    .bi.bi-arrow-left:hover {
+        color: white;
+    }
+
+    .boxAttivitaAmici .col-12.text-center a.btn.rounded-5:hover,
+    .boxAttivitaAmici .col-12.text-start.py-4 .fw-bold.link-underline:hover {
         font-size: 15px;
+    }
+
+    @media screen and (max-width:917px) {
+
+        a.fw-bold.link-underline,
+        .boxAttivitaAmici p {
+            font-size: 0.7rem;
+        }
+
+        .offcanvas-body .col-12.text-start .textPrivacy {
+            font-size: 0.6rem;
+        }
+
+        .boxAttivitaAmici .row .col-12.text-center a.btn {
+            font-size: 0.7rem;
+            padding: 0.6rem 0;
+        }
+
+        .boxAttivitaAmici .row .col-3.colImg .rounded-circle {
+            height: 40px;
+            width: 40px;
+        }
+
+        .col-6 h6.fw-bold {
+            font-size: 0.8rem;
+        }
+
+        .bi.bi-person-plus,
+        .bi.bi-x,
+        .bi.bi-arrow-left {
+            color: #838383;
+            font-size: 20px;
+        }
+    }
+
+    @media screen and (max-width:729px) {
+
+        a.fw-bold.link-underline,
+        .boxAttivitaAmici p {
+            font-size: 0.6rem;
+        }
+
+        .offcanvas-body .col-12.text-start .textPrivacy {
+            font-size: 0.5rem;
+        }
+
+        .boxAttivitaAmici .row .col-12.text-center a.btn {
+            font-size: 0.6rem;
+            padding: 0.6rem 0;
+        }
+
+        .boxAttivitaAmici .row .col-3.colImg .rounded-circle {
+            height: 20px;
+            width: 20px;
+        }
+
+        .col-6 h6.fw-bold {
+            font-size: 0.6rem;
+        }
+
+        .bi.bi-person-plus,
+        .bi.bi-x,
+        .bi.bi-arrow-left {
+            color: #838383;
+            font-size: 15px;
+        }
+    }
+}
+@media screen and (max-width:1300px){
+    .boxAttivitaAmici,
+    .addFriends,#nav-bar-users{
+        display:none;
+    }
+    #changing-box{
+        width:100%;
     }
 }

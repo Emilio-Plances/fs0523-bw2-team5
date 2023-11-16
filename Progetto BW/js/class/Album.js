@@ -1,4 +1,4 @@
-class Album{
+export class Album{
    constructor(_cover, _title, _tracks, _release_date, _artistID, _artistName){
       this.cover_big=_cover;
       this.title=_title;

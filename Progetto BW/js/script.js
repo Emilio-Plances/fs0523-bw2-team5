@@ -1,5 +1,6 @@
 import {SearchTrack} from "./class/SearchTrack.js";
 import {HomeCard} from "./class/HomeCard.js";
+import {Library} from "./class/Library.js";
 const API=`https://striveschool-api.herokuapp.com/api/deezer/`;
 const ALGORITMO=[{
    id:92,
@@ -74,11 +75,11 @@ let homeButton=document.querySelector(`#home-button`);
 let input= document.querySelector(`#search-bar`);
 let plusButton = document.getElementById("arrow-button");
 let leftColumn = document.getElementById("left-column");
-let ripDate = document.querySelector(".rip-date");
-let addDate = document.querySelector(".add-date");
+
 let searchButton=document.getElementById('search-button')
 let closeBox = document.querySelector('#closeBox');
-let boxAttivitaAmici = document.querySelector('.boxAttivitaAmici.p-3.rounded-3')
+let boxAttivitaAmici = document.querySelector('.boxAttivitaAmici.p-3.rounded-3');
+
 
 closeBox.addEventListener('click', () => {
     boxAttivitaAmici.classList.add('hidden');
@@ -102,12 +103,14 @@ input.addEventListener(`keydown`,(e)=>{
 });
 
 plusButton.addEventListener("click", function () {
-    plusButton.classList.toggle('reverse-arrow')
-    ripDate.classList.toggle('hidden')
-    addDate.classList.toggle('hidden');
+   let ripDate = document.querySelector(".rip-date");
+   let addDate = document.querySelector(".add-date");
+   plusButton.classList.toggle('reverse-arrow')
+   ripDate.classList.toggle('hidden')
+   addDate.classList.toggle('hidden');
    
-    leftColumn.classList.toggle("col-3");
-    leftColumn.classList.toggle("col-5");
+   leftColumn.classList.toggle("col-3");
+   leftColumn.classList.toggle("col-5");
 });
 
 getHome();
@@ -152,7 +155,8 @@ function getHome() {
     .then(dato=>{
       console.log(dato);
       let name;let artist;let immagine;let container; let artistID;
-      let song;let albumID;
+      let song;let albumID;let release;
+      let libraryContainer=document.querySelector(`#library-container`);
       if(element.type==`artist`){
          name=dato.name;
          immagine=dato.picture_medium;
@@ -163,6 +167,7 @@ function getHome() {
       if(element.type==`album`){
          name=dato.title;
          albumID=dato.id;
+         release=dato.release_date;
          artist=dato.artist.name;
          artistID=dato.artist.id;
          immagine=dato.cover_medium;
@@ -172,10 +177,14 @@ function getHome() {
          name=dato.title;
          artist=dato.artist.name;
          artistID=dato.artist.id;
+         release=dato.release_date;
          immagine=dato.album.cover_medium;
          song=dato.preview;
          container=document.querySelector(`#track-home-container`);
       }
+      new Library(API, name, artist, immagine, libraryContainer, artistID, song, albumID, release);
+      new Library(API, name, artist, immagine, libraryContainer, artistID, song, albumID, release);
+
       new HomeCard(API, name, artist, immagine, container, artistID, song, albumID);
     })
    }) 
@@ -186,6 +195,8 @@ function getHomeTemplate(){
    let clone= temp.content.cloneNode(true);
    centralBox.append(clone);
 };
+
+
 
 function resetContainer(container){
    while(container.firstChild){
