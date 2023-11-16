@@ -107,15 +107,18 @@ i:hover {
   gap: 2em;
 }
 
-.play-pause {
-  display: inline-block;
-  padding: 5%;
-  background-color: var(--tertiary-color);
-  color: #111;
+.play-pause-circle{
+  height: 33px;
+  width: 33px;
+  line-height: 33px;
+  background-color: white;
   border-radius: 100%;
+  text-align: center;
+}
 
-
-
+.play-pause {
+  font-size: 1.8em;
+  color: #111;
 }
 
 .play-pause:hover {
@@ -170,5 +173,36 @@ i:hover {
   flex-direction: row;
   gap: 1em;
 }
+
+.central-button-player{
+  font-size: 1.6em;
+}
+
+
+
+
+
+
+
+
+
+.volume-slider {
+  display: none;
+}
+
+.custom-volume-slider {
+  width: 100px;
+  height: 5px;
+  background-color: #363636;
+  border-radius: 5px;
+  position: relative;
+}
+
+.custom-volume-slider i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 
 
