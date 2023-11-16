@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/circular-font.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="container-fluid mt-3 border border-danger bg width-left">
+        <div class="row">
+            <div class="col-3 border border-warning" id="left-column">
+                <div class="d-flex flex-column bg-dark py-3 rounded-4 row-gap-3 nav-bar mb-2">
+                    <div>
+                        <div id="home-button" class="d-flex align-items-center ps-4 w-100"><i
+                                class="bi bi-house-door pe-3"></i><span class="d-none d-md-block">Home</span></div>
+                    </div>
+                    <div>
+                        <div id="search-button" class="d-flex align-items-center ps-4 w-100">
+                            <label for="search-bar"><i class="bi bi-search pe-3"></i><span class="d-none d-md-inline">Cerca</span></label>
+                        </div>
+                    </div>
+                </div>
+
+
+                <aside class="bg-dark rounded-4 left-aside">
+                    <div class="d-flex align-items-center justify-content-between py-2">
+                        <div>
+                            <button id="libreria" class="p-0 ms-4"><i class="bi bi-collection pe-3"></i> <span
+                                    class="d-none  d-xl-inline">La tua
+                                    libreria</span></button>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <button id="add-button"> </button>
+
+                            <div class="dropdown">
+                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuLink"
+                                    data-bs-toggle="dropdown" aria-expanded="false"><i
+                                        class="bi bi-plus-lg  d-none  d-lg-block"></i>
+
+                                </button>
+                                <ul class="dropdown-menu" id="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li><button class="dropdown-item text-light"><i
+                                                class="bi bi-music-note-beamed me-2"></i>Crea una nuova
+                                            playlist</button>
+                                    </li>
+                                    <li><button class="dropdown-item text-light"><i class="bi bi-folder me-2"></i>Crea
+                                            una
+                                            nuova
+                                            cartella playlist</button></li>
+                                </ul>
+                            </div>
+                            <button id="arrow-button" class="me-3  d-none  d-lg-block"> <i
+                                    class="bi bi-arrow-right"></i></button>
+                        </div>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="d-flex ps-3 column-gap-3 mt-2">
+                        <div><button id="playlist-button" class="px-3  d-none  d-lg-block">Playlist</button></div>
+                        <div><button id="artist-button" class="form-select px-3 d-none  d-lg-block">Artisti</button>
+                        </div>
+                    </div>
+                    <div class="d-flex  justify-content-between mt-3 align-items-center pe-1">
+                        <button id="search-lib" class="ms-3 d-none d-md-block"><i class="bi bi-search"></i></button>
+                        <div id="list-lib" class="me-4 d-flex align-items-center column-gap-2">
+                            <div class="dropdown">
+                                <a class="btn dropdown-toggle d-none d-md-block" href="#" role="button"
+                                    id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bi bi-list"></i>
+                                </a>
+
+                                <ul class="dropdown-menu" id="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <li class="dropdown-item li-drop">Ordina per</li>
+                                    <li><button class="dropdown-item text-light">Recenti</button></li>
+                                    <li><button class="dropdown-item text-light">Aggiunti di recente</button></li>
+                                    <li><button class="dropdown-item text-light">Ordine alfabetico</button></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li class="dropdown-item li-drop">Visualizza come</li>
+                                    <li><button class="dropdown-item text-light">Compatta</button></li>
+                                    <li><button class="dropdown-item text-light">Elenco</button></li>
+                                    <li><button class="dropdown-item text-light">Griglia</button></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="your-library d-flex align-items-center ms-2 mt-3">
+                        <div class="mx-2">
+                            <img src="assets/imgs/main/image-1.jpg" alt="" height="60px">
+                        </div>
+                        <div class="text-start">
+                            <p class="text-light m-0 d-none d-lg-block">
+                                Noyz Narcos
+                            </p>
+                            <div>
+                                <p id="p-artist" class="mb-0  d-none d-lg-block">Artista</p>
+                            </div>
+
+
+                        </div>
+                        <div class="col text-center d-none add-date">
+                            <p class="d-none d-lg-block">1 apr 2023</p>
+                        </div>
+                        <div class="col-3 text-end me-4 d-none rip-date" >
+                            <p class="d-none d-lg-block">1 apr 2023</p>
+                        </div>
+
+                    </div>
+                    <div class="your-library d-flex align-items-center ms-2 mt-3">
+                        <div class="mx-2">
+                            <img src="assets/imgs/main/image-1.jpg" alt="" height="60px">
+                        </div>
+                        <div class="text-start">
+                            <p class="text-light m-0 d-none d-lg-block">
+                                Noyz Narcos
+                            </p>
+                            <div>
+                                <p id="p-artist" class="mb-0  d-none d-lg-block">Artista</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="your-library d-flex align-items-center ms-2 mt-3">
+                        <div class="mx-2">
+                            <img src="assets/imgs/main/image-1.jpg" alt="" height="60px">
+                        </div>
+                        <div class="text-start">
+                            <p class="text-light m-0  d-none d-lg-block">
+                                Noyz Narcos
+                            </p>
+                            <div>
+                                <p id="p-artist" class="mb-0  d-none d-lg-block">Artista</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </aside>
+            </div>
+            <div class="col-8 border border-warning"></div>
+            <div class="col-2 border border-warning"></div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/left-bar.js"></script>
+    <script src="js/nav-bar.js"></script>
+</body>
+
+</html>

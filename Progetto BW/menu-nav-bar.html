@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="assets/css/circular-font.css">
+  <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid d-flex justify-content-between">
+        <div class="d-flex">
+          <button id="arrow-back" class="me-2"><i class=" bi bi-caret-left text-light"></i></button>
+          <button id="arrow-forward"><i class="bi bi-caret-right text-light"></i></button>
+          <div class="d-flex" role="search">
+            <input id="search-bar" class="form-control ms-2" type="search" placeholder="Cosa vuoi ascoltare"
+              aria-label="Search">
+          </div>
+        </div>
+
+        <div class="d-flex">
+          <div class="d-flex align-items-center">
+
+            <div class="nav-item">
+              <button id="premium-button" class="nav-link active me-2" aria-current="page" href="#">Esplora
+                Premium</button>
+            </div>
+            <div class="nav-item">
+              <button id="nav-bar-bell" class="nav-link me-1" href="#"><i class="bi bi-bell text-light"></i></button>
+            </div>
+            <div class="nav-item dropdown">
+              <button id="nav-bar-user" class="nav-link dropdown-toggle me-1" href="#" id="navbarDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-person  text-light"></i>
+              </button>
+
+            </div>
+            <div class="nav-item">
+              <button id="nav-bar-users" class="nav-link me-1" href="#" tabindex="-1" aria-disabled="true"><i
+                  class="bi bi-people  text-light"></i></button>
+            </div>
+
+          </div>
+
+
+        </div>
+      </div>
+    </nav>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="js/left-bar.js"></script>
+  <script src="js/nav-bar.js"></script>
+  <script src="node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

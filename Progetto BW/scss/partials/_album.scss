@@ -1,0 +1,120 @@
+.boxAlbum {
+  background: linear-gradient(180deg, rgba(215, 154, 20, 0.958420868347339) 0%, rgba(0, 0, 0, 1) 87%);
+  height: 100vh;
+}
+
+.boxAlbum .ms-1 .imageAlbum a img.rounded-3 {
+  width: 150px;
+  height: 150px;
+}
+
+.boxAlbum .ms-1 .imageArtist img.rounded-circle {
+  height: 20px;
+  width: 20px;
+}
+
+.playBlack {
+  color: black;
+  font-size: 2em;
+}
+
+.iconPlayCircle {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  background-color: $secondary;
+  border-radius: 100%;
+}
+
+.bi.bi-shuffle,
+.bi.bi-suit-heart,
+.bi.bi-download,
+.bi.bi-three-dots,
+.bi.bi-clock,
+.elenco {
+  color: #838383;
+}
+
+.bi.bi-shuffle:hover,
+.bi.bi-suit-heart:hover,
+.bi.bi-download:hover,
+.bi.bi-three-dots:hover,
+.elenco:hover {
+  color: white;
+}
+
+.imageAlbum a .rounded-3:hover,
+.iconPlayCircle:hover {
+  transform: scale(1.1);
+}
+
+.tabella {
+  width: 100%;
+}
+
+.value {
+  padding-top: 16px;
+}
+
+.indice,
+.title,
+.rank,
+.durataValue {
+  color: #838383;
+}
+
+.titleTrack {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.boxAlbum .boxAlbumTracks .boxTracks .tabella .headerTable tr {
+  border-bottom: 1px solid #ada9a954;
+}
+
+.boxAlbumTracks {
+  background: linear-gradient(180deg, rgba(9, 9, 8, 0) 0%, rgba(0, 0, 0, 0.2189250700280112) 0%);
+}
+
+.tabella tbody tr:hover {
+  background-color: rgba(243, 236, 236, 0.122);
+  color: white;
+}
+
+a.title {
+  text-decoration: none;
+}
+
+a.title:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+.iconPlayIndice {
+  position: relative;
+}
+
+.playBlack.bi.bi-play-fill.fs-4 {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+}
+
+.heart,
+.filled-heart,
+.threePoints,
+.playBlack.bi.bi-play-fill.fs-4 {
+    opacity: 0;
+}
+
+.filled-heart {
+  color: $secondary;
+}
+
+.areatrack:hover .heart,
+.areatrack:hover .threePoints,
+.areatrack:hover .playBlack.bi.bi-play-fill.fs-4{
+  opacity:1; 
+};
