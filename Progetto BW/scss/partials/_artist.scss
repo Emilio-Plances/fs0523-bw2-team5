@@ -96,7 +96,7 @@ $sfondo: #51544e;
                   color: $scritte;
             }
       }
-      .box-hearts {
+      .box_hearts {
             // position: relative;
             //left: 25px;
             //top: 25px;
@@ -147,6 +147,9 @@ $sfondo: #51544e;
       .hov:hover .heart_artist {
             opacity: 1;
       }
+      .number-p {
+            opacity: 1;
+      }
 
       .visi {
             display: none;
@@ -195,6 +198,14 @@ $sfondo: #51544e;
             bottom: 10px;
             right: 7px;
       }
+      #white {
+            position: relative;
+            right: 38px;
+            bottom: 7px;
+            font-size: 26px;
+            opacity: 0;
+      }
+
       @media screen and (min-width: 529px) {
             .bot {
                   max-width: 59%;
