@@ -12756,7 +12756,6 @@ a.title:hover {
   opacity: 1;
 }
 
-<<<<<<< HEAD
 .dropdown-menu .btnIcon {
   color: #838383;
 }
@@ -12778,8 +12777,6 @@ a.title:hover {
     top: -8px;
   }
 }
-=======
->>>>>>> 22560b0096207ffa78158e5dedf9dfea07ed8aae
 * {
   box-sizing: border-box;
   font-family: "circular std book", sans-serif;
@@ -12807,11 +12804,7 @@ body {
   color: var(--tertiary-color);
 }
 
-i {
-  color: var(--quaternary-color);
-}
-
-i:hover {
+.whiteHover:hover {
   color: white;
 }
 
@@ -12951,6 +12944,9 @@ i:hover {
 .central-button-player {
   font-size: 1.6em;
 }
+.central-button-player:hover {
+  color: white;
+}
 
 .volume-bar {
   display: flex;
@@ -12962,7 +12958,6 @@ i:hover {
   width: 6em;
 }
 
-<<<<<<< HEAD
 .volume-bar .progress-bar:hover .progress::after {
   --size: .8em;
 }
@@ -12971,11 +12966,45 @@ i:hover {
   transform: scale(1.1);
 }
 
+.activeGreen {
+  color: #1fdf64;
+}
+
+.gray-color-player {
+  color: var(--quaternary-color);
+}
+
+@media (max-width: 768px) {
+  .other-features {
+    display: none;
+  }
+  .progress-controller {
+    align-items: end;
+    color: var(--quaternary-color);
+    margin-right: 60px;
+  }
+  .progress-container {
+    align-items: end;
+    justify-content: end;
+    max-width: 500px;
+  }
+}
+@media (max-width: 450px) {
+  .other-features {
+    display: none;
+  }
+  .progress-controller {
+    justify-content: center;
+    align-items: center;
+    margin-right: 0px;
+  }
+  .progress-container {
+    align-items: center;
+    justify-content: center;
+  }
+  .song-description, .icons, .image-container {
+    display: none;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
-=======
-.custom-volume-slider i {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}/*# sourceMappingURL=style.css.map */
->>>>>>> 22560b0096207ffa78158e5dedf9dfea07ed8aae

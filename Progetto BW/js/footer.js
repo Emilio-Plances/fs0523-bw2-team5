@@ -97,5 +97,89 @@ function toggleActiveGreen(element) {
     element.classList.toggle('activeGreen');
 };
 
+let progressVolume = document.getElementById('progressVolume');
+let volumeBar = document.querySelector('.volume-bar');
+
+volumeBar.addEventListener('click', function (e) {
+    let percent = e.offsetX / volumeBar.offsetWidth;
+    audioPlayer.volume = percent;
+    progressVolume.style.width = percent * 100 + '%';
+});
+
+audioPlayer.addEventListener('volumechange', function () {
+    let percent = audioPlayer.volume * 100;
+    progressVolume.style.width = percent + '%';
+});
+
+let skipStartButton = document.querySelector('.bi-skip-start-fill');
+
+skipStartButton.addEventListener('click', function () {
+
+    fetch(`https://striveschool-api.herokuapp.com/api/deezer/track/${selectedID}`, {
+        method: 'GET',
+        headers: {
+            "Content-Type": "application/json",
+        }
+    }).then(res => res.json())
+        .then(track => {
+
+            let albumID = track.album.id;
+            
+            fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${albumID}`, {
+                method: 'GET',
+                headers: {
+                    "Content-Type": "application/json",
+                }
+            }).then(res => res.json())
+                .then(album => {
+
+                    let currentIndex = album.tracks.data.findIndex(t => t.id == selectedID);
+                    let previousIndex = (currentIndex - 1 + album.tracks.data.length) % album.tracks.data.length;
+                    let previousTrackID = album.tracks.data[previousIndex].id;
+
+                    selectedID = previousTrackID;
+                    getSong();
+                });
+        });
+});
+
+let skipEndButton = document.querySelector('.bi-skip-end-fill');
+
+skipEndButton.addEventListener('click', function () {
+
+    fetch(`https://striveschool-api.herokuapp.com/api/deezer/track/${selectedID}`, {
+        method: 'GET',
+        headers: {
+            "Content-Type": "application/json",
+        }
+    }).then(res => res.json())
+        .then(track => {
+
+            let albumID = track.album.id;
+            
+            fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${albumID}`, {
+                method: 'GET',
+                headers: {
+                    "Content-Type": "application/json",
+                }
+            }).then(res => res.json())
+                .then(album => {
+
+                    let currentIndex = album.tracks.data.findIndex(t => t.id == selectedID);
+                    let nextIndex = (currentIndex + 1) % album.tracks.data.length;
+                    let nextTrackID = album.tracks.data[nextIndex].id;
+
+                    selectedID = nextTrackID;
+                    getSong();
+                });
+        });
+});
+
+
+
+
+
+
+
 
 

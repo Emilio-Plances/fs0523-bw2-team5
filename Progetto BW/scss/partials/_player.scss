@@ -26,11 +26,7 @@ body {
   color: var(--tertiary-color);
 }
 
-i {
-  color: var(--quaternary-color);
-}
-
-i:hover {
+.whiteHover:hover {
   color: white;
 }
 
@@ -88,7 +84,6 @@ i:hover {
 }
 
 .progress-controller {
-
   width: 100%;
   display: flex;
   justify-content: center;
@@ -173,6 +168,9 @@ i:hover {
 
 .central-button-player {
   font-size: 1.6em;
+  &:hover{
+    color: white;
+  }
 }
 
 .volume-bar {
@@ -194,3 +192,49 @@ i:hover {
     transform: scale(1.1);
   }
 }
+
+.activeGreen{
+  color: $secondary;
+}
+
+.gray-color-player{
+  color: var(--quaternary-color)
+}
+
+@media (max-width: 768px) {
+  .other-features{
+    display: none;
+  }
+
+  .progress-controller{
+    align-items: end;
+    color: var(--quaternary-color);
+    margin-right: 60px;
+  }
+  .progress-container{
+    align-items: end;
+    justify-content: end;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 450px) {
+  .other-features{
+    display: none;
+  }
+
+  .progress-controller{
+    justify-content: center;
+    align-items: center;
+    margin-right: 0px;
+  }
+  .progress-container{
+    align-items: center;
+    justify-content: center;
+  }
+
+  .song-description, .icons, .image-container{
+    display: none;
+  }
+}
+

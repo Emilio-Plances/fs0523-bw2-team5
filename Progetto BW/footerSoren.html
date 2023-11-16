@@ -21,13 +21,16 @@
             <div class="image-container">
                <img class="imgMusicPlayer" src="https://picsum.photos/200/300?random=1" alt="album cover">
             </div>
-            <div class="song-description">
-               <p class="musicPlayerTitle title">Titolo</p>
-               <p class="musicPlayerArtist artist">Artista</p>
+            <div class="song-description row">
+               <p class="col-12 my-0 fs-6 musicPlayerTitle title text-white">Titolo</p>
+               <p class="col-12 my-0 musicPlayerArtist artist">Artista</p>
             </div>
          </div>
          <div class="icons">
-            <i class="bi bi-heart"></i>
+            <div class="box-hearts">
+               <i class="heart bi bi-heart mx-3 hidden"></i>
+               <i class="filled-heart bi bi-heart-fill mx-3 hidden"></i>
+            </div>
          </div>
       </div>
       <div class="progress-controller">
@@ -47,17 +50,17 @@
          </div>
       </div>
       <div class="other-features">
-         <i class="bi bi-file-play"></i>
-         <i class="bi bi-mic"></i>
-         <i class="bi bi-menu-button-wide"></i>
-         <i class="bi bi-pc-display"></i>
+         <i class="gray-color-player bi bi-play-btn"></i>
+         <i class="gray-color-player bi bi-mic"></i>
+         <i class="gray-color-player bi bi-menu-button-wide"></i>
+         <i class="gray-color-player bi bi-pc-display"></i>
          <div class="volume-bar">
-            <i class="bi bi-volume-up"></i>
+            <i class="gray-color-player bi bi-volume-up"></i>
             <div class="progress-bar">
                <div id="progressVolume" class="progress"></div>
             </div>
          </div>
-         <i class="bi bi-arrows-angle-expand"></i>
+         <i class="gray-color-player bi bi-arrows-angle-expand"></i>
       </div>
 
       <div class="d-flex">
