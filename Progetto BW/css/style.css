@@ -11854,4 +11854,158 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+.hidden {
+  display: none;
+}
+
+.width-left {
+  min-width: 450px;
+}
+
+aside {
+  height: 70vh;
+}
+
+#home-button, #search-button, #list-lib {
+  cursor: pointer;
+  border: 0px;
+  color: #999;
+  font-weight: bold;
+  font-size: 24px;
+  padding-left: 25px;
+}
+
+#search-button:hover, #home-button:hover, #libreria:hover, #add-button:hover, #arrow-button:hover {
+  color: #f8f9fa;
+}
+
+#libreria {
+  background-color: #181818;
+  border: 0px;
+  color: #999;
+  font-weight: bold;
+  font-size: 24px;
+  padding-left: 25px;
+}
+
+#add-button, #arrow-button {
+  background-color: #181818;
+  border: 0px;
+  color: #999;
+  font-size: 25px;
+  border-radius: 100%;
+}
+
+#add-button:hover, #arrow-button:hover {
+  background-color: #232323;
+}
+
+#artist-track-p {
+  color: grey;
+}
+
+#playlist-button, #artist-button {
+  background-color: #232323;
+  border: 0px;
+  color: white;
+  padding: 8px;
+  border-radius: 100px;
+}
+
+#playlist-button:hover, #artist-button:hover {
+  background-color: #383737;
+}
+
+.dropdown-item:hover {
+  background-color: #5d5d5d;
+}
+
+#dropdownMenuLink {
+  color: #999;
+  cursor: pointer;
+  border: 0px;
+  font-weight: bold;
+  font-size: 24px;
+  padding-left: 25px;
+}
+
+#dropdown-menu {
+  background-color: #383737;
+}
+
+.li-drop {
+  color: #999;
+  font-size: 12px;
+}
+
+#list-lib {
+  font-size: 16px;
+}
+
+#list-lib:hover {
+  color: white;
+}
+
+#search-lib {
+  font-size: 16px;
+  background-color: #181818;
+  border: 0px;
+  color: #999;
+  border-radius: 100%;
+}
+
+#search-lib:hover {
+  color: white;
+  background-color: #232323;
+}
+
+#p-artist, .rip-date, .add-date {
+  color: #999;
+}
+
+.your-library:hover {
+  background-color: #232323;
+  cursor: pointer;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.reverse-arrow {
+  transform: rotate(180deg);
+}
+
+#arrow-back, #arrow-forward, #nav-bar-bell, #nav-bar-user, #nav-bar-users {
+  background-color: #000;
+  border: 0px;
+  font-size: 15px;
+  border-radius: 100%;
+  width: 35px;
+  height: 35px;
+}
+
+#search-bar {
+  color: white;
+  background-color: #232323;
+  border: 0px;
+  border-radius: 100px;
+}
+
+#search-bar::placeholder {
+  color: grey;
+}
+
+#premium-button {
+  font-weight: 600;
+  padding: 2px 10px;
+  background-color: white;
+  border-radius: 100px;
+}
+
+#nav-bar-bell:hover, #nav-bar-user:hover, #nav-bar-users:hover, #premium-button:hover {
+  transform: scale(1.1);
+}
+
+/*# sourceMappingURL=style.css.map */
