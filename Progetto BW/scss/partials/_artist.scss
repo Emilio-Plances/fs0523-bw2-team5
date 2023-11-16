@@ -1,0 +1,164 @@
+$scritte: #ffff;
+$sfondo: #51544e;
+/*@font-face {
+      font-family: "Circular";
+      src: url(../fonts/CircularStd-Book.otf);
+      font-weight: 400;
+      font-style: normal;
+}
+@font-face {
+      font-family: "Circular";
+      src: url(../fonts/CircularStd-Bold.otf);
+      font-weight: 700;
+      font-style: normal;
+}* fai breakpoint*/
+@font-face {
+      font-family: "Circular";
+      src: url(../fonts/CircularStd-Black.otf);
+      font-weight: 900;
+      font-style: normal;
+}
+#pd {
+      background: linear-gradient($sfondo, $dark, black);
+}
+.contenitore {
+      background-image: url(https://th.bing.com/th/id/OIP.eJXsMhozoC3rm97gLms6RgHaE8?w=234&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 380px;
+      .pos {
+            position: relative;
+            top: 188px;
+            left: 14px;
+      }
+      h1 {
+            color: $scritte;
+
+            font-size: 80px;
+            font-weight: 700;
+            margin-bottom: 0;
+      }
+}
+.logo {
+      margin-top: 20px;
+      margin-left: 20px;
+      color: #2590f5;
+}
+.text {
+      font-size: 20px;
+      color: $scritte;
+      margin-left: 10px;
+}
+.bold {
+      color: $scritte;
+      font-weight: bold;
+      font-size: 19px;
+      margin-left: 20px;
+      margin-bottom: auto;
+}
+.cont2 {
+      justify-content: space-between;
+      max-width: 40%;
+      margin: 20px 21px;
+}
+.playBlack {
+      color: black;
+      font-size: 2em;
+}
+
+.circle {
+      width: 58px;
+      /*height: auto;
+      text-align: center;
+      line-height: 50px;
+      background-color: $secondary;
+      border-radius: 100%;
+
+      position: absolute;*/
+}
+.random {
+      color: $scritte;
+}
+
+.btn {
+      color: $scritte;
+      border: 1px solid rgba(255, 255, 255, 0.281);
+      padding: 5px 10px;
+      margin: 0 10px;
+      border-radius: 20px;
+      font-size: 15px;
+
+      &:hover {
+            border: 1px solid rgb(255, 255, 255);
+            color: $scritte;
+      }
+}
+#punti {
+      color: rgba(255, 255, 255, 0.41);
+      margin-right: 10px;
+}
+.cont3 {
+      color: $scritte;
+}
+.sotcont {
+}
+.t5 {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+}
+.hov:hover {
+      background-color: $sfondo;
+}
+.visi {
+      display: none;
+
+      &:hover {
+            display: block;
+      }
+}
+.text6 {
+      font-size: smaller;
+      font-weight: bold;
+      color: $scritte;
+}
+.text3 {
+      margin-left: 21px;
+      color: $scritte;
+      font-size: x-large;
+      font-weight: bold;
+}
+.cont4 {
+      margin: 0 10px;
+}
+.text5 {
+      color: $scritte;
+      margin-left: 90px;
+}
+.tra {
+      background-color: $sfondo;
+
+      height: auto;
+      border-radius: 20px;
+}
+.bold2 {
+      @extend.bold;
+}
+.immg {
+      border-radius: 100%;
+      margin-bottom: 10px;
+      margin-top: 30px;
+      margin-left: 30px;
+}
+.imm {
+      position: relative;
+      bottom: 10px;
+      right: 7px;
+}
+
+@media only screen and (min-width: 560px) {
+      .bot {
+            max-width: 35%;
+      }
+}
