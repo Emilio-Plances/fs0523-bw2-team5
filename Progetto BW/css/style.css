@@ -11881,42 +11881,65 @@ textarea.form-control-lg {
   color: #1fdf64;
 }
 
-.card {
+#central-box {
+  height: 77vh;
+  overflow-y: scroll;
+}
+#central-box::-webkit-scrollbar {
+  width: 10px;
+  height: 100px;
+}
+#central-box::-webkit-scrollbar-track {
+  background: transparent;
+}
+#central-box::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 10px;
+  transition: background-color linear 0.6s;
+}
+#central-box:hover::-webkit-scrollbar-thumb {
+  background-color: #808080;
+}
+#central-box::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+#central-box .card {
   flex-basis: 205px;
   background-color: #181818;
 }
-.card:hover {
+#central-box .card:hover {
   cursor: pointer;
   background-color: #282828;
 }
-.card:hover .circle {
+#central-box .card:hover .circle {
   opacity: 1;
   transform: translate(-50%, -50%) translateY(-10px);
 }
-.card .home-card-img {
+#central-box .card .home-card-img {
   width: 90%;
 }
-.card .home-card-artist, .card .home-card-title {
+#central-box .card .home-card-artist,
+#central-box .card .home-card-title {
   font-size: 1em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.card .home-link-title:hover {
+#central-box .card .home-link-title:hover {
   text-decoration: none;
 }
-.card .home-link-artist {
+#central-box .card .home-link-artist {
   color: #828282;
 }
-.card .imgCard {
+#central-box .card .imgCard {
   position: relative;
   display: block;
 }
-.card .playBlack {
+#central-box .card .playBlack {
   color: black;
   font-size: 2em;
 }
-.card .circle {
+#central-box .card .circle {
   width: 50px;
   height: 50px;
   text-align: center;
@@ -11930,11 +11953,18 @@ textarea.form-control-lg {
   right: 0px;
   transition: opacity 0.3s, transform 0.3s;
 }
-
-.home-container {
+#central-box .home-section {
+  font-weight: bold;
+  font-size: 2rem;
+}
+#central-box .home-container {
   overflow: hidden;
   flex-wrap: wrap;
-  max-height: 291px;
+  max-height: 280px;
+}
+
+#central-box:hover::-webkit-scrollbar-thumb {
+  background-color: grey;
 }
 
 * {
@@ -11961,7 +11991,6 @@ a:hover {
   text-decoration: underline;
 }
 
-<<<<<<< HEAD
 .hidden {
   display: none;
 }
@@ -11974,7 +12003,9 @@ aside {
   height: 70vh;
 }
 
-#home-button, #search-button, #list-lib {
+#home-button,
+#search-button,
+#list-lib {
   cursor: pointer;
   border: 0px;
   color: #999;
@@ -11983,7 +12014,11 @@ aside {
   padding-left: 25px;
 }
 
-#search-button:hover, #home-button:hover, #libreria:hover, #add-button:hover, #arrow-button:hover {
+#search-button:hover,
+#home-button:hover,
+#libreria:hover,
+#add-button:hover,
+#arrow-button:hover {
   color: #f8f9fa;
 }
 
@@ -11996,7 +12031,8 @@ aside {
   padding-left: 25px;
 }
 
-#add-button, #arrow-button {
+#add-button,
+#arrow-button {
   background-color: #181818;
   border: 0px;
   color: #999;
@@ -12004,7 +12040,8 @@ aside {
   border-radius: 100%;
 }
 
-#add-button:hover, #arrow-button:hover {
+#add-button:hover,
+#arrow-button:hover {
   background-color: #232323;
 }
 
@@ -12012,7 +12049,8 @@ aside {
   color: grey;
 }
 
-#playlist-button, #artist-button {
+#playlist-button,
+#artist-button {
   background-color: #232323;
   border: 0px;
   color: white;
@@ -12020,7 +12058,8 @@ aside {
   border-radius: 100px;
 }
 
-#playlist-button:hover, #artist-button:hover {
+#playlist-button:hover,
+#artist-button:hover {
   background-color: #383737;
 }
 
@@ -12067,7 +12106,9 @@ aside {
   background-color: #232323;
 }
 
-#p-artist, .rip-date, .add-date {
+#p-artist,
+.rip-date,
+.add-date {
   color: #999;
 }
 
@@ -12091,6 +12132,10 @@ aside {
   border-radius: 100%;
   width: 35px;
   height: 35px;
+}
+
+.boxAttivitaAmici {
+  height: 77vh;
 }
 
 #search-bar {
@@ -12564,7 +12609,8 @@ a.title:hover {
 .areatrack:hover .threePoints,
 .areatrack:hover .playBlack.bi.bi-play-fill.fs-4 {
   opacity: 1;
-=======
+}
+
 * {
   box-sizing: border-box;
   font-family: "circular std book", sans-serif;
@@ -12753,7 +12799,4 @@ i:hover {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
->>>>>>> 8a4eabb370072ea9c5c4ec718c45927d5a336bf9
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

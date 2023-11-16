@@ -1,61 +1,110 @@
-.card{
-   flex-basis:205px;
+#central-box {
+   height:77vh;
+   overflow-y:scroll;
+
+   &::-webkit-scrollbar {
+      width: 10px;
+      height:100px;
+      
+   }
    
-   background-color: $dark;
+   &::-webkit-scrollbar-track {
+      background: transparent;
+   }
+   
+   &::-webkit-scrollbar-thumb {
+      background-color: #00000000;
+      border-radius: 10px;
+      transition: background-color linear 0.6s;
+   }
+
    &:hover{
-      cursor: pointer;
-      background-color: $hover;
-      .circle{
-         opacity: 1;
-         transform: translate(-50%, -50%) translateY(-10px);
+      &::-webkit-scrollbar-thumb{
+         background-color: #808080;
       }
    }
-   .home-card-img{
-      width:90%;
+   &::-webkit-scrollbar-thumb:hover {
+      background: #555;
    }
-   .home-card-artist,.home-card-title{
-      font-size: 1em;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-   }
-   .home-link-title{
-      &:hover{
-         text-decoration: none;
+
+   .card {
+      flex-basis: 205px;
+
+      background-color: $dark;
+
+      &:hover {
+         cursor: pointer;
+         background-color: $hover;
+
+         .circle {
+            opacity: 1;
+            transform: translate(-50%, -50%) translateY(-10px);
+         }
       }
-   }
-   .home-link-artist{
-      color:#828282;
+
+      .home-card-img {
+         width: 90%;
+      }
+
+      .home-card-artist,
+      .home-card-title {
+         font-size: 1em;
+         white-space: nowrap;
+         overflow: hidden;
+         text-overflow: ellipsis;
+      }
+
+      .home-link-title {
+         &:hover {
+            text-decoration: none;
+         }
+      }
+
+      .home-link-artist {
+         color: #828282;
+      }
+
+      .imgCard {
+         position: relative;
+         display: block;
+      }
+
+      .playBlack {
+         color: black;
+         font-size: 2em;
+      }
+
+      .circle {
+         width: 50px;
+         height: 50px;
+         text-align: center;
+         line-height: 50px;
+         background-color: $secondary;
+         border-radius: 100%;
+         opacity: 0;
+         transform: translate(-50%, -50%);
+         position: absolute;
+         bottom: -25px;
+         right: 0px;
+         transition: opacity 0.3s, transform 0.3s;
+      }
+
 
    }
-   .imgCard{
-      position: relative;
-      display: block;
+
+   .home-section {
+      font-weight: bold;
+      font-size: 2rem;
    }
-   
-   .playBlack{
-      color: black;
-      font-size: 2em;
-   }
-   
-   .circle {
-      width: 50px;
-      height: 50px;
-      text-align: center;
-      line-height: 50px;
-      background-color: $secondary;
-      border-radius: 100%;
-      opacity: 0;
-      transform: translate(-50%, -50%);
-      position: absolute;
-      bottom: -25px;
-      right: 0px;
-      transition: opacity 0.3s, transform 0.3s;
+
+   .home-container {
+      overflow: hidden;
+      flex-wrap: wrap;
+      max-height: 280px;
    }
 }
-
-.home-container{
-   overflow: hidden;
-   flex-wrap: wrap;
-   max-height:291px;
+#central-box:hover{
+   &::-webkit-scrollbar-thumb{
+      background-color: grey;
+   }
 }
