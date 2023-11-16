@@ -144,10 +144,9 @@ i:hover {
 .progress {
   position: relative;
   height: 100%;
-  width: 30%;
+  width: 1%;
   border-radius: 10px;
   background-color: var(--quaternary-color);
-
 }
 
 .progress-bar .progress {
@@ -178,31 +177,16 @@ i:hover {
   font-size: 1.6em;
 }
 
-
-
-
-
-
-
-
-
-.volume-slider {
-  display: none;
+.volume-bar{
+  display: flex;
+  align-items: center;
+  gap: .7em;
 }
 
-.custom-volume-slider {
-  width: 100px;
-  height: 5px;
-  background-color: #363636;
-  border-radius: 5px;
-  position: relative;
+.volume-bar .progress-bar {
+  width: 6em;
 }
 
-.custom-volume-slider i {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+.volume-bar .progress-bar:hover .progress::after {
+  --size: .8em;
 }
-
-
-
