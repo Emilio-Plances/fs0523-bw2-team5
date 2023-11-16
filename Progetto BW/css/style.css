@@ -11961,7 +11961,6 @@ a:hover {
   text-decoration: underline;
 }
 
-<<<<<<< HEAD
 .hidden {
   display: none;
 }
@@ -12000,8 +11999,10 @@ aside {
   background-color: #181818;
   border: 0px;
   color: #999;
-  font-size: 25px;
+  width: 35px;
+  height: 35px;
   border-radius: 100%;
+  font-size: 17px;
 }
 
 #add-button:hover, #arrow-button:hover {
@@ -12564,7 +12565,8 @@ a.title:hover {
 .areatrack:hover .threePoints,
 .areatrack:hover .playBlack.bi.bi-play-fill.fs-4 {
   opacity: 1;
-=======
+}
+
 * {
   box-sizing: border-box;
   font-family: "circular std book", sans-serif;
@@ -12753,7 +12755,6 @@ i:hover {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
->>>>>>> 8a4eabb370072ea9c5c4ec718c45927d5a336bf9
 }
 
 /*# sourceMappingURL=style.css.map */
