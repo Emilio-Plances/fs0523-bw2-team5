@@ -11961,7 +11961,6 @@ a:hover {
   text-decoration: underline;
 }
 
-<<<<<<< HEAD
 .hidden {
   display: none;
 }
@@ -12507,7 +12506,8 @@ a.fw-bold.link-underline {
 .indice,
 .title,
 .rank,
-.durataValue {
+.durataValue,
+.heart {
   color: #838383;
 }
 
@@ -12545,7 +12545,7 @@ a.title:hover {
 
 .playBlack.bi.bi-play-fill.fs-4 {
   position: absolute;
-  top: -6px;
+  top: -10px;
   right: -10px;
 }
 
@@ -12556,6 +12556,18 @@ a.title:hover {
   opacity: 0;
 }
 
+.box-hearts {
+  position: relative;
+  left: 48px;
+  top: -8px;
+  width: 50px;
+}
+
+.heart, .filled-heart {
+  position: absolute;
+  right: 0;
+}
+
 .filled-heart {
   color: #1fdf64;
 }
@@ -12564,7 +12576,8 @@ a.title:hover {
 .areatrack:hover .threePoints,
 .areatrack:hover .playBlack.bi.bi-play-fill.fs-4 {
   opacity: 1;
-=======
+}
+
 * {
   box-sizing: border-box;
   font-family: "circular std book", sans-serif;
@@ -12753,7 +12766,6 @@ i:hover {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
->>>>>>> 8a4eabb370072ea9c5c4ec718c45927d5a336bf9
 }
 
 /*# sourceMappingURL=style.css.map */
