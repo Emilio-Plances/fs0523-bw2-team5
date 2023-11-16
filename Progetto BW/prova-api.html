@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="assets/css/circular-font.css">
+   <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+   <link rel="stylesheet" href="css/style.css">
+   <title>Spotify</title>
+</head>
+
+<body>
+   <button id="home-button">home</button>
+   
+   <input id="search-bar" class="form-control ms-2 text-light" type="search" placeholder="Cosa vuoi ascoltare" aria-label="Search">
+
+   <div id="central-box"></div>   
+
+   <template id="track-search-template">
+      <div class="d-flex p-3 track-card text-white justify-content-between align-items-center mb-3">
+         <div class="d-flex">
+            <div>
+               <img class="img-track rounded-circle" src="https://picsum.photos/50/50?random=1" alt="#">
+            </div>
+            <div class="ms-3">
+               <p class="name-track m-0 p-0">Titolo</p>
+               <a href="#" class="artist-name-track text-white">Artist</a>
+            </div>
+         </div>
+         <div class="d-flex">
+            <div class="box-hearts">
+               <i class="heart bi bi-heart mx-3 hidden"></i>
+               <i class="filled-heart bi bi-heart-fill mx-3 hidden"></i>
+            </div>
+            <p class="time-track m-0 p-0">track time</p>
+         </div>
+      </div>
+   </template>
+
+   <template id="home-template">
+      <div class="container-fluid">
+         <div class="mb-4">
+            <h3 class="text-white">Ascoltate di recente</h3>
+            <div id="track-home-container" class="d-flex home-container">
+            </div>
+         </div>   
+            
+         <div class="mb-4">
+            <h3 class="text-white">Artisti più ascoltati</h3>
+            <div id="artist-home-container" class="d-flex home-container"></div>
+         </div>
+
+         <div class="mb-4">
+            <h3 class="text-white">Album più famosi</h3>
+            <div id="album-home-container" class="d-flex home-container"></div>
+         </div>
+      </div> 
+   </template>
+
+   <template id="card-home-template"> 
+      <div class="card-home card p-2 pt-3 rounded-3 me-3 mb-3">
+         <div class="text-center imgCard">
+            <img src="https://picsum.photos/250/250?random=1" class="home-card-img rounded-3 card-img-top" alt="...">
+            <div class="circle">
+               <i class="ms-1 playBlack bi bi-play-fill"></i>
+            </div>
+         </div>
+         <div class="card-body text-white">
+            <a class="home-link-title" href="#"><h5 class="home-card-title text-white card-title">Name</h5></a>
+            <a class="home-link-artist" href="#"><p class="home-card-artist text-white card-text">Artist</p></a>
+         </div>
+      </div>
+   </template>
+
+   <script src="node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+   <script type="module" src="js/prova-api.js"></script>
+</body>
+</html> 
