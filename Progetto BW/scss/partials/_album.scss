@@ -1,11 +1,206 @@
 .boxAlbum {
   background: linear-gradient(180deg, rgba(215, 154, 20, 0.958420868347339) 0%, rgba(0, 0, 0, 1) 87%);
   height: 100vh;
+}
+
+.boxAlbum .ms-1 .imageAlbum a img.rounded-3 {
+  width: 150px;
+  height: 150px;
+}
+
+.boxAlbum .ms-1 .imageArtist img.rounded-circle {
+  height: 20px;
+  width: 20px;
+}
+
+.playBlackCircle {
+  color: black;
+  font-size: 2em;
+}
+
+.iconPlayCircle {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  background-color: $secondary;
+  border-radius: 100%;
+}
+
+.bi.bi-shuffle,
+.bi.bi-suit-heart,
+.bi.bi-download,
+.bi.bi-three-dots,
+.bi.bi-clock,
+.elenco {
+  color: #838383;
+}
+
+.bi.bi-shuffle:hover,
+.heart.bi.bi-heart:hover,
+.bi.bi-download:hover,
+.bi.bi-three-dots:hover,
+.elenco:hover {
+  color: white;
+}
+
+.casualIcon,
+.iconHeart,
+.iconDownload,
+.iconOption {
+  position: relative;
+}
+
+.tooltip-casualIcon,
+.tooltip-iconDownload,
+.tooltip-iconHeart,
+.tooltip-iconOption {
+  visibility: hidden;
+  position: absolute;
+  z-index: 1;
+  color: white;
+  background-color: $dark;
+  border-radius: 10px;
+  padding: 4px;
+}
+
+.tooltip-casualIcon {
+  top: -25px;
+  left: -51px;
+  width: 198px;
+}
+
+.tooltip-iconHeart {
+  top: -25px;
+  left: -51px;
+  width: 140px;
+}
+
+.tooltip-iconDownload {
+  top: -25px;
+  left: -22px;
+  max-width: 89px;
+}
+
+.tooltip-iconOption {
+  top: -25px;
+  left: -28px;
+  width: 80px;
+}
 
 
-  .boxAlbum .ms-1 .imageAlbum a img.rounded-3 {
-    width: 150px;
-    height: 150px;
+
+.casualIcon:hover .tooltip-casualIcon,
+.iconHeart:hover .tooltip-iconHeart,
+.iconDownload:hover .tooltip-iconDownload,
+.iconOption:hover .tooltip-iconOption {
+  visibility: visible;
+}
+
+
+
+.imageAlbum a .rounded-3:hover,
+.iconPlayCircle:hover {
+  transform: scale(1.1);
+}
+
+.tabella {
+  width: 100%;
+}
+
+.value {
+  padding-top: 16px;
+}
+
+.indice,
+.title,
+.rank,
+.durataValue,
+.heart {
+  color: #838383;
+}
+
+.titleTrack {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.boxAlbum .boxAlbumTracks .boxTracks .tabella .headerTable tr {
+  border-bottom: 1px solid #ada9a954;
+}
+
+.boxAlbumTracks {
+  background: linear-gradient(180deg, rgba(9, 9, 8, 0) 0%, rgba(0, 0, 0, 0.2189250700280112) 0%);
+}
+
+.tabella tbody tr:hover {
+  background-color: rgba(243, 236, 236, 0.122);
+  color: white;
+}
+
+a.title {
+  text-decoration: none;
+}
+
+a.title:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+.iconPlayIndice {
+  position: relative;
+}
+
+.playBlack.bi.bi-play-fill.fs-4 {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+
+.heart,
+.threePoints,
+.playBlack.bi.bi-play-fill.fs-4 {
+  opacity: 0;
+}
+
+.box-hearts {
+  position: relative;
+  left: 79px;
+  top: -8px;
+  width: 50px;
+}
+
+.heart,
+.filled-heart {
+  position: absolute;
+  right: 0;
+}
+
+.filled-heart {
+  color: $secondary;
+}
+
+.areatrack:hover .heart,
+.areatrack:hover .threePoints,
+.areatrack:hover .playBlack.bi.bi-play-fill.fs-4 {
+  opacity: 1;
+}
+
+.dropdown-menu .btnIcon {
+  color: #838383;
+}
+
+.dropdown-menu .btnIcon:hover {
+  color: white;
+  background-color: rgba(243, 236, 236, 0.122);
+}
+
+@media screen and (max-width:703px) {
+
+  .box-hearts {
+    left: 47px;
+    top: -8px;
   }
 
   .boxAlbum .ms-1 .imageArtist img.rounded-circle {
