@@ -33,7 +33,7 @@ a{
    flex-shrink:2;
 }
 
-#central-box,#library-container,#right-column{
+*{
 
    &::-webkit-scrollbar {
       width: 10px;

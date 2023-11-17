@@ -278,11 +278,6 @@
             </div>
             <i class="bi bi-arrows-angle-expand"></i>
          </div>
-
-         <div class="d-flex">
-            <button id="button1">1</button>
-            <button id="button2">2</button>
-         </div>
       </div>
    </div>
 
@@ -385,7 +380,7 @@
                   CVLT
                </h2>
                <div class="d-flex align-items-center">
-                  <img class="rounded-circle" src="assets/imgs/search/image-1.jpeg " alt="">
+                  <img class="album-artist-image rounded-circle" src="assets/imgs/search/image-1.jpeg " alt="">
                   <div class="ms-2">
                      <a class="link-underline link-underline-opacity-0 text-white album-artist-name" href="#">
                         Salmo &#183; 
@@ -469,19 +464,12 @@
                            Compatta
                         </button>
                      </div>
-
-
                   </ul>
                </div>
-
             </div>
-
             <div class="boxTracks ">
-
                <table class="tabella">
-
                   <thead class="headerTable">
-
                      <tr>
                         <td class="indice ps-3 pb-2 pe-3">#</td>
                         <td class="title pb-2">Titolo</td>
@@ -493,8 +481,7 @@
                      </tr>
                   </thead>
 
-                  <tbody id="areatrack-container">
-                  </tbody>
+                  <tbody id="areatrack-container"></tbody>
                </table>
             </div>
          </div>
@@ -504,17 +491,17 @@
    <template id="areatrack-template">
       <tr class="areatrack">
          <td class="indice ps-3 pt-2  pe-3">
-            <span class="iconPlayIndice">
+            <div class="iconPlayIndice track-tracklist-index">
                1<i class="playBlack bi bi-play-fill fs-4 text-white"></i>
-            </span>
+            </div>
          </td>
          <td class="pt-2">
-            <div class="titleTrack text-white fw-bold">Dance the night</div>
-            <div class="nameArtist"><a class=" title" href="">Dua Lipa</a></div>
+            <div class="titleTrack text-white fw-bold track-tracklist-title">Dance the night</div>
+            <div class="nameArtist track-tracklist-artist"><a class="title" href="">Dua Lipa</a></div>
          </td>
          <td></td>
-         <td class="rank  text-center d-none d-sm-block">
-            <div class="value">22</div>
+         <td class="rank text-center d-none d-sm-block">
+            <div class="track-tracklist-rank value">22</div>
          </td>
          <td class="text-end">
             <div class="box-hearts">
@@ -523,12 +510,94 @@
             </div>
          </td>
          <td class="durateTrack text-center">
-            <span class="durataValue">3:54</span>
+            <span class="durataValue track-tracklist-time">3:54</span>
          </td>
          <td class="text-end">
             <i class=" threePoints bi bi-three-dots fs-6 pe-2"></i>
          </td>
       </tr>
+   </template>
+
+   
+   <template id="artist-page-template">
+      <div id="artist-box">
+         <div class="artist-page-bg-image contenitore">
+            <div class="pos d-flex flex-column">
+               <div class="logo">
+                  <i class="bi bi-patch-check"></i>
+                  <span class="text">Artista verificato</span>
+               </div>
+               <div>
+                  <h1 class="artist-page-name nomeArtist">Geolier</h1>
+                  <p class="artist-page-rank bold">
+                     5.353.727 ascolti mensili
+                  </p>
+               </div>
+            </div>
+         </div>
+         
+         <div class="cont2 d-flex align-items-center justify-content-between my-3">
+            <div class="circle rounded-circle bg-secondary py-2 px-3">
+               <i class="ms-1 playNero bi bi-play-fill"></i>
+               <i id="pAusa" class="bi bi-pause-fill hidden"></i>
+            </div>
+            <div class="random">
+               <i id="random" class="bi bi-shuffle"></i>
+               <span class="toolTips-random">Abilita la produzione casuale</span>
+            </div>
+            <div>
+               <a href="#" class="btn">Segui</a>
+            </div>
+            <div class="ciccio">
+               <i id="punti" class="bi bi-three-dots"></i>
+               <span class="toolTips-punti">
+                  Altre opzioni
+               </span>
+            </div>
+         </div>
+         <div class="cont3">
+            <div class="sotcont">
+               <p class="text3">Popolari</p>
+               <div id="track-artist-container"
+                  class="hov d-flex flex-row justify-content-between align-items-baseline pt-3 px-3"></div>
+
+               <a class="artist-page-tracklist" href="#">
+                  <p class="text6">Visualizza altro</p>
+               </a>
+
+            </div>
+         </div>
+   </template>
+
+   <template id="track-artist-template">
+      <div class="track-artist-card d-flex">
+            <p>
+                  <b class="number-p"></b>
+            </p>
+            <i class="white bi-play"></i>
+            <img class="imm p-2" src="./assets/imgs/main/artist-profile.jpg"/>
+            <div>
+                  <p class="t5 track-artist-title">2 SECONDI</p>
+                  <div>
+                        <div>
+                              <p class="track-artist-artistName">Geolier</p>
+                        </div>
+                  </div>
+            </div>
+      </div>
+
+      <div>
+            <p class="d-none track-artist-rank d-md-block">20</p>
+      </div>
+
+      <div class="d-flex justify-content-between">
+            <div class="box_hearts">
+                  <i class="heart_artist bi bi-heart mx-3 fs-5"></i>
+                  <i class="filled_heart bi bi-heart-fill mx-3 hidden"></i>
+            </div>
+            <p class="track-artist-duration">2:29</p>
+            <i class="punto bi bi-three-dots ps-3"></i>
+      </div>
    </template>
 
    <script src="node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>

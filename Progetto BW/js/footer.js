@@ -39,8 +39,6 @@ async function initMusicPlayer(track) {
     playPauseButton.classList.toggle('bi-pause-fill');
 }
 
-let audioPlayer = new Audio();
-
 let playPauseButton = document.getElementById('play');
 
 playPauseButton.addEventListener('click', function () {
@@ -174,12 +172,3 @@ skipEndButton.addEventListener('click', function () {
                 });
         });
 });
-
-
-
-
-
-
-
-
-

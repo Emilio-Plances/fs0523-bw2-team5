@@ -4,8 +4,11 @@
   height: 100vh;
 
   .rounded-circle {
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
+  }
+  .dropdown-toggle::after{
+    display:none;
   }
 
   .imageAlbum {
@@ -18,11 +21,10 @@
     height: 150px;
   }
 
-  .boxAlbum .ms-1 .imageArtist img.rounded-circle {
-    height: 20px;
-    width: 20px;
+  .boxAlbumTracks{
+    height: 738px;
+    overflow-y: scroll;
   }
-
   .playBlackCircle {
     color: black;
     font-size: 2em;
@@ -75,9 +77,9 @@
   }
 
   .tooltip-casualIcon {
-    top: -25px;
-    left: -51px;
-    width: 198px;
+    top: -32px;
+    left: -75px;
+    width: 221px;
   }
 
   .tooltip-iconHeart {

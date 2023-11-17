@@ -11992,22 +11992,22 @@ a:hover {
   flex-shrink: 2;
 }
 
-#central-box::-webkit-scrollbar, #library-container::-webkit-scrollbar, #right-column::-webkit-scrollbar {
+*::-webkit-scrollbar {
   width: 10px;
   height: 100px;
 }
-#central-box::-webkit-scrollbar-track, #library-container::-webkit-scrollbar-track, #right-column::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
   background: transparent;
 }
-#central-box::-webkit-scrollbar-thumb, #library-container::-webkit-scrollbar-thumb, #right-column::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0);
   border-radius: 10px;
   transition: background-color linear 0.6s;
 }
-#central-box:hover::-webkit-scrollbar-thumb, #library-container:hover::-webkit-scrollbar-thumb, #right-column:hover::-webkit-scrollbar-thumb {
+*:hover::-webkit-scrollbar-thumb {
   background-color: #808080;
 }
-#central-box::-webkit-scrollbar-thumb:hover, #library-container::-webkit-scrollbar-thumb:hover, #right-column::-webkit-scrollbar-thumb:hover {
+*::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
 
@@ -12187,12 +12187,6 @@ a:hover {
   transform: scale(1.1);
 }
 
-@font-face {
-  font-family: "Circular";
-  src: url(../fonts/CircularStd-Black.otf);
-  font-weight: 900;
-  font-style: normal;
-}
 #artist-box {
   background: linear-gradient(#51544e, #181818, black);
 }
@@ -12236,13 +12230,28 @@ a:hover {
   max-width: 80%;
   margin: 20px 21px;
 }
-#artist-box .playBlack {
+#artist-box .circle:hover {
+  transform: scale(1.1);
+}
+#artist-box .playNero {
+  position: relative;
+  top: -2px;
   color: black;
-  font-size: 2em;
+  font-size: 2.5em;
+  opacity: 1;
+}
+#artist-box #pAusa {
+  position: relative;
+  bottom: 2px;
+  right: 1px;
+  font-size: 2.5rem;
+}
+#artist-box .hidden {
+  opacity: 0;
 }
 #artist-box .circle {
-  width: 60px;
-  height: auto;
+  width: 86px;
+  height: 70px;
   text-align: center;
 }
 #artist-box #random {
@@ -12258,6 +12267,7 @@ a:hover {
   margin: 0 10px;
   border-radius: 20px;
   font-size: 15px;
+  text-decoration: none;
 }
 #artist-box .btn:hover {
   border: 1px solid rgb(255, 255, 255);
@@ -12267,12 +12277,10 @@ a:hover {
   width: 50px;
 }
 #artist-box .heart,
-#artist-box .filled-heart {
+#artist-box .filled_heart {
   position: relative;
-  opacity: 0;
   bottom: 30px;
-  left: 2px;
-  font-size: 18px;
+  font-size: 20px;
 }
 #artist-box .heart_artist {
   display: block;
@@ -12281,20 +12289,23 @@ a:hover {
 }
 #artist-box .heart_artist:hover {
   color: white;
-  opacity: 1;
 }
-#artist-box .filled-heart {
+#artist-box .filled_heart {
   color: #1fdf64;
 }
 #artist-box #punti {
   color: rgba(255, 255, 255, 0.41);
   margin-right: 10px;
+  font-size: x-large;
+}
+#artist-box #punti:hover {
+  color: white;
 }
 #artist-box .cont3 {
   color: white;
 }
 #artist-box .sotcont {
-  max-width: 88%;
+  max-width: 100%;
 }
 #artist-box .t5 {
   white-space: nowrap;
@@ -12308,7 +12319,13 @@ a:hover {
 #artist-box .hov:hover .heart_artist {
   opacity: 1;
 }
-#artist-box .number-p {
+#artist-box .hov:hover .white {
+  opacity: 1;
+}
+#artist-box .punto {
+  opacity: 0;
+}
+#artist-box .hov:hover .punto {
   opacity: 1;
 }
 #artist-box .visi {
@@ -12353,12 +12370,43 @@ a:hover {
   bottom: 10px;
   right: 7px;
 }
-#artist-box #white {
+#artist-box .white {
   position: relative;
-  right: 38px;
+  right: 15px;
   bottom: 7px;
   font-size: 26px;
   opacity: 0;
+}
+#artist-box .white.bi-play {
+  color: white;
+}
+#artist-box .random,
+#artist-box .ciccio {
+  position: relative;
+}
+#artist-box .toolTips-random,
+#artist-box .toolTips-punti {
+  visibility: hidden;
+  position: absolute;
+  z-index: 1;
+  color: white;
+  background-color: #181818;
+  border-radius: 10px;
+  padding: 4px;
+}
+#artist-box .toolTips-random {
+  top: -37px;
+  right: -164px;
+  width: 212px;
+}
+#artist-box .toolTips-punti {
+  width: 97px;
+  bottom: 40px;
+  right: -55px;
+}
+#artist-box .random:hover .toolTips-random,
+#artist-box .ciccio:hover .toolTips-punti {
+  visibility: visible;
 }
 @media screen and (min-width: 529px) {
   #artist-box .bot {
@@ -12578,8 +12626,11 @@ a:hover {
   height: 100vh;
 }
 .boxAlbum .rounded-circle {
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
+}
+.boxAlbum .dropdown-toggle::after {
+  display: none;
 }
 .boxAlbum .imageAlbum {
   width: 200px;
@@ -12589,9 +12640,9 @@ a:hover {
   width: 150px;
   height: 150px;
 }
-.boxAlbum .boxAlbum .ms-1 .imageArtist img.rounded-circle {
-  height: 20px;
-  width: 20px;
+.boxAlbum .boxAlbumTracks {
+  height: 738px;
+  overflow-y: scroll;
 }
 .boxAlbum .playBlackCircle {
   color: black;
@@ -12639,9 +12690,9 @@ a:hover {
   padding: 4px;
 }
 .boxAlbum .tooltip-casualIcon {
-  top: -25px;
-  left: -51px;
-  width: 198px;
+  top: -32px;
+  left: -75px;
+  width: 221px;
 }
 .boxAlbum .tooltip-iconHeart {
   top: -25px;
@@ -13003,6 +13054,7 @@ a:hover {
 }
 
 .control-buttons {
+  margin-top: 8px;
   display: flex;
   align-items: center;
   gap: 2em;

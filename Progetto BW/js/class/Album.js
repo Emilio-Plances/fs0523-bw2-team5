@@ -1,5 +1,7 @@
+import {Track} from "./Track.js";
+
 export class Album{
-   constructor(_cover, _title, _tracks, _release_date, _artistID, _artistName, _numberTracks){
+   constructor(_cover, _title, _tracks, _release_date, _artistID, _artistName, _numberTracks,_artistImage,_audioPlayer){
       this.cover_big=_cover;
       this.title=_title;
       this.tracks=_tracks;
@@ -7,26 +9,33 @@ export class Album{
       this.artistID=_artistID;
       this.artistName=_artistName;
       this.numberTracks=_numberTracks;
-      console.log(this);
+      this.artistImage=_artistImage;
+      this.audioPlayer=_audioPlayer;
       this.HTMLinit();
    }
    HTMLinit(){
-      this.getAlbumTemplate();
-      temp= document.querySelector(`#album-template`);
-
-   }
-   getAlbumTemplate(){
-      let centralBox=document.querySelector(`#central-box`);
       let temp= document.querySelector(`#album-template`);
       let clone= temp.content.cloneNode(true);
+      let centralBox=document.querySelector(`#central-box`);
+      let containerTrack=clone.querySelector(`#areatrack-container`);
+      this.setAreaTrack(containerTrack);
       this.setAlbumVariables(clone);
       centralBox.append(clone);
    }
+
    setAlbumVariables(clone){
       clone.querySelector(`.album-img`).src=this.cover_big;
       clone.querySelector(`.album-title`).innerText=this.title;
       clone.querySelector(`.album-release-date`).innerText=this.release_date;
       clone.querySelector(`.album-artist-name`).innerText=this.artistName;
       clone.querySelector(`.album-number-tracks`).innerText=this.numberTracks;
+      clone.querySelector(`.album-artist-image`).src=this.artistImage;
+   }
+
+   setAreaTrack(container){
+      this.tracks.forEach((element,i)=>{
+         new Track(i, element.title,element.artist.name,element.rank,
+            element.duration,element.preview,container, element.album.cover_small, element.id,this.audioPlayer)
+      })
    }
 }
