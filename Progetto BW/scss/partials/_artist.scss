@@ -1,9 +1,3 @@
-@font-face {
-      font-family: "Circular";
-      src: url(../fonts/CircularStd-Black.otf);
-      font-weight: 900;
-      font-style: normal;
-}
 #artist-box {
       $scritte: #ffff;
       $sfondo: #51544e;
@@ -11,14 +5,15 @@
 
       .contenitore {
             background-image: url(https://th.bing.com/th/id/OIP.eJXsMhozoC3rm97gLms6RgHaE8?w=234&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7);
-            background-size: cover;
+            background-size: 100% 380px;
             background-repeat: no-repeat;
             width: 100%;
             height: 380px;
+
             .pos {
-                  position: relative;
-                  top: 188px;
-                  left: 14px;
+                  position: absolute;
+                  bottom: 10px;
+                  left: 10px;
             }
             h1 {
                   color: $scritte;

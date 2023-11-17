@@ -37,12 +37,12 @@
                <div class="d-flex align-items-center justify-content-between py-2">
                   <div>
                      <button id="libreria" class="p-0 ms-4">
-                        <i class="bi bi-collection pe-3"></i> 
+                        <i class="bi bi-collection pe-3"></i>
                         <span class="d-none  d-xl-inline">La tua libreria</span>
                      </button>
                   </div>
                   <div class="d-flex align-items-center">
-                    
+
 
                      <div class="dropdown">
                         <button class="btn dropdown-toggle" type="button" id="dropdownMenuLink"
@@ -51,14 +51,18 @@
 
                         </button>
                         <ul class="dropdown-menu" id="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                           <li><button class="dropdown-item text-light"><i class="bi bi-music-note-beamed me-2"></i>Crea
-                                 una nuova
-                                 playlist</button>
+                           <li>
+                              <button class="dropdown-item text-light">
+                                 <i class="bi bi-music-note-beamed me-2"></i>
+                                 Creauna nuova playlist
+                              </button>
                            </li>
-                           <li><button class="dropdown-item text-light"><i class="bi bi-folder me-2"></i>Crea
-                                 una
-                                 nuova
-                                 cartella playlist</button></li>
+                           <li>
+                              <button class="dropdown-item text-light">
+                                 <i class="bi bi-folder me-2"></i>
+                                 Crea una nuova cartella playlist
+                              </button>
+                           </li>
                         </ul>
                      </div>
                      <button id="arrow-button" class="me-3  d-none  d-lg-block"> <i
@@ -104,19 +108,21 @@
          </div>
          <div id="changing-box" class="col">
             <div id="navbar" class="bg-dark ">
-               <nav class="navbar navbar-expand-lg navbar-light">
+               <nav id="non-si-sposta" class="navbar mt-2 navbar-expand-lg navbar-light">
                   <div class="container-fluid d-flex justify-content-between">
                      <div class="d-flex">
                         <button id="arrow-back" class="me-2"><i class=" bi bi-caret-left text-light"></i></button>
                         <button id="arrow-forward"><i class="bi bi-caret-right text-light"></i></button>
                         <div class="d-flex" role="search">
-                           <input id="search-bar" class="form-control ms-2 hidden" type="search" placeholder="Cosa vuoi ascoltare" aria-label="Search">
+                           <input id="search-bar" class="form-control ms-2 hidden" type="search"
+                              placeholder="Cosa vuoi ascoltare" aria-label="Search">
                         </div>
                      </div>
                      <div class="d-flex">
                         <div class="d-flex align-items-center">
                            <div class="nav-item">
-                              <button id="premium-button" class="nav-link active me-2" aria-current="page" href="#">Esplora Premium</button>
+                              <button id="premium-button" class="nav-link active me-2" aria-current="page"
+                                 href="#">Esplora Premium</button>
                            </div>
                            <div class="nav-item">
                               <button id="nav-bar-bell" class="nav-link me-1" href="#">
@@ -130,7 +136,8 @@
                               </button>
                            </div>
                            <div class="nav-item">
-                              <button id="nav-bar-users" class="nav-link me-1" href="#" tabindex="-1" aria-disabled="true">
+                              <button id="nav-bar-users" class="nav-link me-1" href="#" tabindex="-1"
+                                 aria-disabled="true">
                                  <i class="bi bi-people  text-light"></i>
                               </button>
                            </div>
@@ -271,11 +278,6 @@
             </div>
             <i class="bi bi-arrows-angle-expand"></i>
          </div>
-   
-         <div class="d-flex">
-            <button id="button1">1</button>
-            <button id="button2">2</button>
-         </div>
       </div>
    </div>
 
@@ -285,9 +287,13 @@
             <img class="library-card-img" src="assets/imgs/main/image-1.jpg" alt="" loading="lazy">
          </div>
          <div class="text-start">
-            <p class="library-card-title text-light m-0 d-none d-lg-block">Noyz Narcos</p>
+            <a class="library-name-link" href="#">
+               <p class="library-card-title text-light m-0 d-none d-lg-block"></p>
+            </a>
             <div>
-               <p class="library-card-artist mb-0 p-artist d-none d-lg-block">Artista</p>
+               <a class="library-type-link text-capitalize" href="#">
+                  <p class="library-card-type mb-0 p-artist d-none d-lg-block"></p>
+               </a>
             </div>
          </div>
          <div class="col text-center hidden add-date">
@@ -343,7 +349,8 @@
    <template id="card-home-template">
       <div class="card-home card p-2 pt-3 rounded-3 me-3 mb-3">
          <div class="text-center imgCard">
-            <img src="https://picsum.photos/250/250?random=1" class="home-card-img rounded-3 card-img-top" alt="..." loading="lazy">
+            <img src="https://picsum.photos/250/250?random=1" class="home-card-img rounded-3 card-img-top" alt="..."
+               loading="lazy">
             <div class="circle">
                <i class="ms-1 playBlack bi bi-play-fill"></i>
             </div>
@@ -359,9 +366,252 @@
       </div>
    </template>
 
+   <template id="album-template">
+      <div class=" boxAlbum rounded-3">
+         <div class="ms-1 text-white d-sm-flex mb-3 ">
+            <div class="imageAlbum me-3">
+               <a href="#">
+                  <img class="rounded-3 album-img" src="assets/imgs/search/image-11.jpg" alt="img-album">
+               </a>
+            </div>
+            <div class="imageArtist d-sm-flex flex-column mt-1">
+               <p class="d-none d-sm-block">Album</p>
+               <h2 class="display-5 album-title fw-bold">
+                  CVLT
+               </h2>
+               <div class="d-flex align-items-center">
+                  <img class="album-artist-image rounded-circle" src="assets/imgs/search/image-1.jpeg " alt="">
+                  <div class="ms-2">
+                     <a class="link-underline link-underline-opacity-0 text-white album-artist-name" href="#">
+                        Salmo &#183; 
+                     </a>
+                     <p class="m-0 album-release-date"></p>
+                  </div>
+               </div>
+               <p><span class="mt-2 album-number-tracks"></span> Brani</p> 
+               
+            </div>
+
+         </div>
+
+         <div class="boxAlbumTracks pt-3 p-2">
+
+            <div class="boxIcons d-flex justify-content-between mb-3 align-items-baseline">
+
+               <div class="d-flex align-items-baseline">
+
+                  <div class=" iconPlayCircle me-2 me-sm-4">
+                     <a href="#">
+                        <i class="ms-1 playBlackCircle bi bi-play-fill fs-2"></i>
+                     </a>
+                  </div>
+
+                  <div class="casualIcon me-2">
+                     <a href="#">
+                        <i class="bi bi-shuffle fs-3"></i>
+                        <span class="tooltip-casualIcon">
+                           Abilità la riproduzione casuale
+                        </span>
+                     </a>
+                  </div>
+
+                  <div class="iconHeart me-2">
+                     <a href="#">
+                        <i class="library-hearth bi bi-suit-heart fs-3"></i>
+                        <span class="tooltip-iconHeart">
+                           Salva in La tua libreria
+                        </span>
+                     </a>
+                  </div>
+
+                  <div class="iconDownload me-2">
+                     <a href="#">
+                        <i class="bi bi-download fs-3"></i>
+                        <span class="tooltip-iconDownload">
+                           Download
+                        </span>
+                     </a>
+                  </div>
+
+                  <div class="iconOption">
+                     <a href="#">
+                        <i class="bi bi-three-dots fs-3"></i>
+                        <span class="tooltip-iconOption">
+                           Altre opzioni
+                        </span>
+                     </a>
+                  </div>
+
+               </div>
+
+               <div class="dropdown">
+                  <button class=" btn btn-trasparent border border-0 dropdown-toggle" type="button"
+                     data-bs-toggle="dropdown" aria-expanded="false">
+                     <div class=" elenco d-flex align-items-center">Elenco
+                        <i class="bi bi-list-task fs-5 ps-2"></i>
+                     </div>
+                  </button>
+                  <ul class="dropdown-menu bg-primary p-2">
+                     <div class=" btnIcon">
+                        <button class=" btn border border-0">
+                           <i class=" iconDropdown bi bi-list-task pe-2"></i>
+                           Elenco
+                        </button>
+                     </div>
+                     <div class="btnIcon">
+                        <button class=" btn border border-0">
+                           <i class=" iconDropdown bi bi-list pe-2"></i>
+                           Compatta
+                        </button>
+                     </div>
+                  </ul>
+               </div>
+            </div>
+            <div class="boxTracks ">
+               <table class="tabella">
+                  <thead class="headerTable">
+                     <tr>
+                        <td class="indice ps-3 pb-2 pe-3">#</td>
+                        <td class="title pb-2">Titolo</td>
+                        <td></td>
+                        <td class="rank text-center d-none d-sm-block">Rank</td>
+                        <td></td>
+                        <td class="durata pb-2  text-center"><i class="bi bi-clock fs-6"></i></td>
+                        <td></td>
+                     </tr>
+                  </thead>
+
+                  <tbody id="areatrack-container"></tbody>
+               </table>
+            </div>
+         </div>
+      </div>
+   </template>
+
+   <template id="areatrack-template">
+      <tr class="areatrack">
+         <td class="indice ps-3 pt-2  pe-3">
+            <div class="iconPlayIndice track-tracklist-index">
+               1<i class="playBlack bi bi-play-fill fs-4 text-white"></i>
+            </div>
+         </td>
+         <td class="pt-2">
+            <div class="titleTrack text-white fw-bold track-tracklist-title">Dance the night</div>
+            <div class="nameArtist track-tracklist-artist"><a class="title" href="">Dua Lipa</a></div>
+         </td>
+         <td></td>
+         <td class="rank text-center d-none d-sm-block">
+            <div class="track-tracklist-rank value">22</div>
+         </td>
+         <td class="text-end">
+            <div class="box-hearts">
+               <i class="heart bi bi-heart mx-3"></i>
+               <i class="filled-heart bi bi-heart-fill hidden mx-3"></i>
+            </div>
+         </td>
+         <td class="durateTrack text-center">
+            <span class="durataValue track-tracklist-time">3:54</span>
+         </td>
+         <td class="text-end">
+            <i class=" threePoints bi bi-three-dots fs-6 pe-2"></i>
+         </td>
+      </tr>
+   </template>
+
+   <template id="artist-page-template">
+      <div id="artist-box">
+         <div class="artist-page-bg-image position-relative contenitore">
+            <div class="pos d-flex flex-column">
+               <div class="logo">
+                  <i class="bi bi-patch-check"></i>
+                  <span class="text">Artista verificato</span>
+               </div>
+               <div>
+                  <h1 class="artist-page-name nomeArtist">Geolier</h1>
+                  <p class="artist-page-nb-fan bold">
+                     5.353.727 ascolti mensili
+                  </p>
+               </div>
+            </div>
+         </div>
+         
+         <div class="cont2 d-flex align-items-center justify-content-between my-3">
+            <div class="circle me-2 rounded-circle bg-secondary py-2 px-3">
+               <i class="ms-1 playNero bi bi-play-fill"></i>
+               <i id="pAusa" class="bi bi-pause-fill hidden"></i>
+            </div>
+            <div class="random">
+               <i id="random" class="bi bi-shuffle"></i>
+               <span class="toolTips-random">Abilita la produzione casuale</span>
+            </div>
+            <div>
+               <a href="#" class="btn">Segui</a>
+            </div>
+            <div class="ciccio">
+               <i id="punti" class="bi bi-three-dots"></i>
+               <span class="toolTips-punti">
+                  Altre opzioni
+               </span>
+            </div>
+         </div>
+         <div class="cont3">
+            <div class="sotcont">
+               <p class="text3">Popolari</p>
+               <table class="tabella w-100">
+                  <thead class="headerTable">
+                     <tr>
+                        <td class="indice ps-3 pb-2 pe-3">#</td>
+                        <td class="title pb-2">Titolo</td>
+                        <td></td>
+                        <td class="rank text-center d-none d-sm-block">Rank</td>
+                        <td></td>
+                        <td class="durata pb-2  text-center"><i class="bi bi-clock fs-6"></i></td>
+                        <td></td>
+                     </tr>
+                  </thead>
+
+                  <tbody id="areatrack-container"></tbody>
+
+               <a class="artist-page-tracklist" href="#">
+                  <p class="text6">Visualizza altro</p>
+               </a>
+
+            </div>
+         </div>
+   </template>
+
+   <template id="track-artist-template">
+      <div class="track-artist-card d-flex">
+         <p>
+            <b class="number-p"></b>
+         </p>
+         <i class="white bi-play"></i>
+         <div>
+            <p class="t5 track-artist-title">2 SECONDI</p>
+            <div>
+               <div>
+                  <p class="track-artist-artistName">Geolier</p>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div>
+         <p class="d-none track-artist-rank d-md-block">20</p>
+      </div>
+
+      <div class="d-flex justify-content-between">
+         <div class="box_hearts">
+               <i class="heart_artist bi bi-heart mx-3 fs-5"></i>
+               <i class="filled_heart bi bi-heart-fill mx-3 hidden"></i>
+         </div>
+         <p class="track-artist-duration">2:29</p>
+         <i class="punto bi bi-three-dots ps-3"></i>
+      </div>
+   </template>
+
    <script src="node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
    <script type="module" src="js/script.js"></script>
 </body>
-
 </html>

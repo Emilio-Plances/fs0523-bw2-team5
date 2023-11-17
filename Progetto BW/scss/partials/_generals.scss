@@ -27,13 +27,13 @@ a{
 }
 
 #changing-box,#left-column,#right-column{
-   height:88vh;
+   height:90vh;
 }
 #changing-box{
    flex-shrink:2;
 }
 
-#central-box,#library-container,#right-column{
+*{
 
    &::-webkit-scrollbar {
       width: 10px;
