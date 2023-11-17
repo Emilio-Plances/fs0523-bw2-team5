@@ -28,3 +28,12 @@ function noCuori() {
       });
 }
 noCuori();
+fetch("https://striveschool-api.herokuapp.com/api/deezer/artist")
+      .then((response) => response.json())
+      .then((data) => {
+            console.log(data);
+      });
+function getCardClone() {
+      let temp = document.getElementsByTagName("template")[0];
+      return temp.content.cloneNode(true);
+}
