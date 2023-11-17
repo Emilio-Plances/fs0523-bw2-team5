@@ -1,20 +1,30 @@
-let white = document.querySelector("#white");
-let music_row = document.querySelector(".hov");
-let numerazione = document.querySelector(".number-p");
 let cuore = document.querySelector(".heart_artist");
-let verde = document.querySelector(".filled-heart");
-console.log();
-music_row.addEventListener("mouseover", () => {
-      white.style.visibility = "visible";
-      white.style.opacity = "1";
-      numerazione.classList.add("hidden");
+let verde = document.querySelector(".filled_heart");
+let tPlay = document.querySelector(".playNero");
+let pausa = document.querySelector("#pAusa");
+let cirlce = document.querySelector(".cirlce");
+
+tPlay.addEventListener("click", () => {
+      tPlay.classList.toggle("hidden");
+      pausa.classList.toggle("hidden");
 });
-9;
+
+pausa.addEventListener("click", () => {
+      tPlay.classList.toggle("hidden");
+      pausa.classList.toggle("hidden");
+});
+
 function cuori() {
       cuore.addEventListener("click", () => {
-            verde.style.opacity = "1";
-            cuore.style.opacity = "0";
+            verde.classList.toggle("hidden");
+            cuore.classList.toggle("hidden");
       });
 }
 cuori();
-console.log(numerazione);
+function noCuori() {
+      verde.addEventListener("click", () => {
+            cuore.classList.toggle("hidden");
+            verde.classList.toggle("hidden");
+      });
+}
+noCuori();

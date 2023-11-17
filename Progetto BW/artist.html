@@ -37,28 +37,23 @@
                         <div
                               class="circle rounded-circle bg-secondary py-2 px-3"
                         >
-                              <i class="ms-1 playBlack bi bi-play-fill"></i>
+                              <i class="ms-1 playNero bi bi-play-fill"></i>
+                              <i id="pAusa" class="bi bi-pause-fill hidden"></i>
                         </div>
                         <div class="random">
                               <i id="random" class="bi bi-shuffle"></i>
+                              <span class="toolTips-random"
+                                    >Abilita la produzione casuale</span
+                              >
                         </div>
                         <div>
                               <a href="#" class="btn">segui</a>
                         </div>
-                        <div>
-                              <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="16"
-                                    height="16"
-                                    id="punti"
-                                    fill="currentColor"
-                                    class="bi bi-three-dots"
-                                    viewBox="0 0 16 16"
-                              >
-                                    <path
-                                          d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"
-                                    />
-                              </svg>
+                        <div class="ciccio">
+                              <i id="punti" class="bi bi-three-dots"></i>
+                              <span class="toolTips-punti">
+                                    Altre opzioni
+                              </span>
                         </div>
                   </div>
                   <div class="cont3">
@@ -66,13 +61,13 @@
                               <p class="text3">Popolari</p>
 
                               <div
-                                    class="hov d-flex flex-row justify-content-between align-items-center"
+                                    class="hov d-flex flex-row justify-content-between align-items-baseline pt-3 px-3"
                               >
-                                    <div class="d-flex align-items-center">
-                                          <p class="px-4">
+                                    <div class="d-flex">
+                                          <p>
                                                 <b class="number-p">1</b>
                                           </p>
-                                          <i id="white" class="bi-play"></i>
+                                          <i class="white bi-play"></i>
                                           <img
                                                 class="imm p-2"
                                                 src="./assets/imgs/main/artist-profile.jpg"
@@ -81,7 +76,7 @@
                                                 height="50px"
                                           />
                                           <div>
-                                                <h5 class="t5">2 SECONDI</h5>
+                                                <p class="t5">2 SECONDI</p>
                                                 <div>
                                                       <div>
                                                             <p>Geolier</p>
@@ -89,20 +84,25 @@
                                                 </div>
                                           </div>
                                     </div>
-                                    <div class="box_hearts">
-                                          <i
-                                                class="heart_artist bi bi-heart mx-3 fs-5"
-                                          ></i>
 
-                                          <i
-                                                class="filled-heart bi bi-heart-fill mx-3"
-                                          ></i>
-                                    </div>
                                     <div>
-                                          <p>15.385.982</p>
+                                          <p class="d-none d-md-block">20</p>
                                     </div>
-                                    <div>
+
+                                    <div class="d-flex justify-content-between">
+                                          <div class="box_hearts">
+                                                <i
+                                                      class="heart_artist bi bi-heart mx-3 fs-5"
+                                                ></i>
+
+                                                <i
+                                                      class="filled_heart bi bi-heart-fill mx-3 hidden"
+                                                ></i>
+                                          </div>
                                           <p>2:29</p>
+                                          <i
+                                                class="punto bi bi-three-dots ps-3"
+                                          ></i>
                                     </div>
                               </div>
 
