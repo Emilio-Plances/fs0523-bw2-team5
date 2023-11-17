@@ -18,12 +18,12 @@ export class Album{
       let clone= temp.content.cloneNode(true);
       let centralBox=document.querySelector(`#central-box`);
       let containerTrack=clone.querySelector(`#areatrack-container`);
+      this.setVariables(clone);
       this.setAreaTrack(containerTrack);
-      this.setAlbumVariables(clone);
       centralBox.append(clone);
    }
 
-   setAlbumVariables(clone){
+   setVariables(clone){
       clone.querySelector(`.album-img`).src=this.cover_big;
       clone.querySelector(`.album-title`).innerText=this.title;
       clone.querySelector(`.album-release-date`).innerText=this.release_date;
@@ -34,6 +34,7 @@ export class Album{
 
    setAreaTrack(container){
       this.tracks.forEach((element,i)=>{
+         i++;
          new Track(i, element.title,element.artist.name,element.rank,
             element.duration,element.preview,container, element.album.cover_small, element.id,this.audioPlayer)
       })

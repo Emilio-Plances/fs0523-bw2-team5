@@ -83,7 +83,7 @@ export class HomeCard{
    
          this.getArtist(this.artistID)
          .then(artist=>{
-            new Artist(artist.id, artist.name, artist.nb_fan, artist.picture_xl, artist.tracklist)
+            new Artist(this.API,artist.id, artist.name, artist.nb_fan, artist.picture_xl, artist.tracklist,this.songID, this.audioPlayer)
          }); 
       })
    }

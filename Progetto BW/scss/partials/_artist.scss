@@ -9,10 +9,11 @@
             background-repeat: no-repeat;
             width: 100%;
             height: 380px;
-            .pos {
-                  position: relative;
-                  top: 188px;
-                  left: 14px;
+            
+            .pos{
+                  position:absolute;
+                  bottom:10px;
+                  left:10px;
             }
             h1 {
                   color: $scritte;

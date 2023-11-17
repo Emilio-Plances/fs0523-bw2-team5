@@ -65,8 +65,8 @@ export class Library{
                centralBox.removeChild(centralBox.firstChild);
             }
             this.getArtist(this.artistID)
-            .then(artist=>{
-               new Artist(artist.id, artist.name, artist.nb_fan, artist.picture_xl, artist.tracklist)
+            .then(artist=>{   
+               new Artist(this.API,artist.id, artist.name, artist.nb_fan, artist.picture_xl, artist.tracklist, this.songID, this.audioPlayer)
             });
          }
          if(this.type==`album`){
@@ -75,7 +75,6 @@ export class Library{
             }
             this.getAlbum(this.albumID)
             .then(album=>{
-               console.log(this.audioPlayer);
                new Album(album.cover_big, album.title, album.tracks.data, album.release_date, 
                   album.artist.id, album.artist.name,album.nb_tracks,album.artist.picture_small,this.audioPlayer)
             });
@@ -86,7 +85,6 @@ export class Library{
       })
    }
    
-
    getArtist(idArtist){
       
       return fetch(`${this.API}artist/${idArtist}`,{
@@ -132,7 +130,6 @@ export class Library{
          this.changeSong(songID,`plus`);
       })
    }
-
    changeSong(songID,operator) {
 
       fetch(`https://striveschool-api.herokuapp.com/api/deezer/track/${songID}`, {

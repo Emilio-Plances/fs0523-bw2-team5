@@ -12198,9 +12198,9 @@ a:hover {
   height: 380px;
 }
 #artist-box .contenitore .pos {
-  position: relative;
-  top: 188px;
-  left: 14px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
 }
 #artist-box .contenitore h1, #artist-box .contenitore .h1 {
   color: white;
